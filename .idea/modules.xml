@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kimia_faraz.iml" filepath="$PROJECT_DIR$/kimia_faraz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/kimia_faraz_android.iml" filepath="$PROJECT_DIR$/android/kimia_faraz_android.iml" />
+    </modules>
+  </component>
+</project>
