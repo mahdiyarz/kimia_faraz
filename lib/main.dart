@@ -17,7 +17,7 @@ void main() {
           onSecondary: const Color.fromARGB(255, 0, 0, 0),
           error: const Color.fromARGB(255, 164, 74, 63),
           onError: const Color.fromARGB(255, 255, 255, 255),
-          onPrimaryContainer: const Color.fromARGB(255, 203, 223, 189),
+          primaryContainer: const Color.fromARGB(255, 203, 223, 189),
         ),
       ),
     ),
