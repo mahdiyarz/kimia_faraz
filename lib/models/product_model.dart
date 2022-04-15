@@ -1,18 +1,27 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ProductBrand {
-  final String brandName;
-  final Image brandImage;
+  String brandName;
+  String brandImage;
+  String brandLatinName;
 
-  ProductBrand(this.brandName, this.brandImage);
+  ProductBrand({
+    required this.brandName,
+    required this.brandLatinName,
+    required this.brandImage,
+  });
 }
 
 class IntroProduct {
-  final String productName;
-  final String productGroup;
-  final Image productImage;
-  final List<String> introduce;
+  String productName;
+  String productGroup;
+  Image productImage;
+  List<String> introduce;
 
-  IntroProduct(
-      this.productName, this.productGroup, this.productImage, this.introduce);
+  IntroProduct({
+    required this.productName,
+    required this.productGroup,
+    required this.productImage,
+    required this.introduce,
+  });
 }
