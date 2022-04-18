@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../DATA_BASE.dart';
+import '../screens/productList_screen.dart';
 
 class BrandWidget extends StatelessWidget {
   const BrandWidget({Key? key}) : super(key: key);
@@ -8,11 +9,20 @@ class BrandWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        return Container(
+        return SizedBox(
           width: MediaQuery.of(context).size.width,
           height: 160,
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) {
+                    return ProductListScreen(
+                        productBrand: MY_DATA[index].brandName);
+                  },
+                ),
+              );
+            },
             child: Stack(
               children: [
                 Positioned(
