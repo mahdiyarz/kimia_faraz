@@ -16,9 +16,21 @@ class BrandWidget extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  top: 55,
+                  top: 42,
                   child: Container(
-                    width: MediaQuery.of(context).size.width / 1.3,
+                    width: MediaQuery.of(context).size.width,
+                    height: 106,
+                    margin: const EdgeInsets.only(right: 22),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Theme.of(context).colorScheme.secondary,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 45,
+                  child: Container(
+                    width: 130,
                     height: 100,
                     margin: const EdgeInsets.only(right: 25),
                     padding: const EdgeInsets.all(15),
@@ -28,7 +40,7 @@ class BrandWidget extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.35),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(1, 3),
+                          offset: const Offset(1, 3),
                         )
                       ],
                       borderRadius: const BorderRadius.only(
@@ -61,10 +73,10 @@ class BrandWidget extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  right: MediaQuery.of(context).size.width / 2.3,
+                  left: 40,
                   child: SizedBox(
-                    width: 150,
-                    height: 160,
+                    width: 140,
+                    height: 150,
                     child: Image.asset(
                       MY_DATA[index].brandImage,
                     ),
