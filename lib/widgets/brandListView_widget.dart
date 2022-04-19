@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kimia_faraz/screens/home_screen.dart';
 import '../DATA_BASE.dart';
 import '../screens/productList_screen.dart';
 
-class BrandWidget extends StatelessWidget {
-  const BrandWidget({Key? key}) : super(key: key);
+class BrandsListView extends StatelessWidget {
+  const BrandsListView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +18,9 @@ class BrandWidget extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) {
-                    return ProductListScreen(
-                        productBrand: MY_DATA[index].brandName);
+                    return const Home();
+                    // return ProductListScreen(
+                    //     productBrand: brandData[index].name);
                   },
                 ),
               );
@@ -65,7 +67,7 @@ class BrandWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          MY_DATA[index].brandName,
+                          brandData[index].name,
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 22,
@@ -73,7 +75,7 @@ class BrandWidget extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          MY_DATA[index].brandLatinName.toString(),
+                          brandData[index].latinName.toString(),
                           style: const TextStyle(
                             color: Colors.white54,
                           ),
@@ -88,7 +90,7 @@ class BrandWidget extends StatelessWidget {
                     width: 140,
                     height: 150,
                     child: Image.asset(
-                      MY_DATA[index].brandImage,
+                      brandData[index].image,
                     ),
                   ),
                 )
@@ -97,7 +99,7 @@ class BrandWidget extends StatelessWidget {
           ),
         );
       },
-      itemCount: MY_DATA.length,
+      itemCount: brandData.length,
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/brand_widget.dart';
+import '../widgets/brandListView_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
         title: const Text('کیمیا فراز گیل'),
       ),
-      body: BrandWidget(),
+      body: const BrandsListView(),
     );
   }
 }
