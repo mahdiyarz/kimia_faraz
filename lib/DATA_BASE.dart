@@ -40,7 +40,7 @@ List<Brands> brandData = [
     id: 1,
     name: "درمالیفت",
     latinName: "Dermalift",
-    image: "images/dermalift.png",
+    image: "images/dermalift/dermalift.png",
   ),
   Brands(
     id: 2,
@@ -145,7 +145,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'POTASSIUM AZELOYL DIGLYCINATE',
     ],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/melaliftCream.png',
     method:
         'روزانه دو بار کرم ملالیفت را بر روی مناطق تیره پوست مالیده و به خوبی ماساژ دهید. در طی روز حتما از کرم ضد آفتاب با SPF مناسب استفاده نمائید.',
   ),
@@ -170,7 +170,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'ZINC PCA',
     ],
-    image: 'image',
+    image: 'images/dermalift/seboliftCream.png',
     method:
         'پس از شستشوی مناسب پوست، روزانه دو بار کرم سبولیفت را روی مناطقی از پوست که دچار آکنه و کومدون گردیده اند، مالیده و به خوبی ماساژ دهید.',
   ),
@@ -196,7 +196,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'SWEETONE',
     ],
-    image: 'image',
+    image: 'images/dermalift/vitaliftCream.png',
     method:
         'ترجیحا شبها کرم دور چشم ویتالیفت را از سمت داخل به خارج پلک تحتانی با حرکات ضربه ای ملایم بمالید. مراقب باشید کرم داخل چشم نگردد. کرم دور چشم را حداقل به مدت شش ماه استفاده نمائید.',
   ),
@@ -219,7 +219,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'CLARITEA',
     ],
-    image: 'image',
+    image: 'images/dermalift/rozaliftCream',
     method:
         'کرم رزالیفت را روزانه 2 تا 3 بار بر روی مناطقی از پوست که دچار قرمزی یا التهاب گردیده اند، بمالید. مصرف کرم را تا رفع کامل قرمزی و التهاب ادامه دهید.',
   ),
@@ -244,7 +244,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'Actimp',
     ],
-    image: 'image',
+    image: 'images/dermalift/fermaliftCream.png',
     method:
         'پس از شستشوی مناسب پوست، کرم فرمالیفت را صبحها و شبها بر روی پوست صورت و گردن مالیده و به خوبی ماساژ دهید.',
   ),
@@ -270,7 +270,7 @@ List<Products> productsData = [
       'FUCOGEL',
       'AVOCADO OIL',
     ],
-    image: 'image',
+    image: 'images/dermalift/hydraliftCream.png',
     method:
         'کرم مرطوب کننده هیدرالیفت را روزها و شبها به دفعات مورد نیاز به روی پوست صورت و گردن مالیده و به ملایمت ماساژ دهید تا جذب گردد. از این کرم می توانید زیر آرایش نیز استفاده کنید.',
   ),
@@ -291,7 +291,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک، فاقد پارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaGrow.png',
     method: '',
   ),
   Products(
@@ -310,7 +310,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک، فاقد پارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaKer.png',
     method: '',
   ),
   Products(
@@ -327,7 +327,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک، فاقد بارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaColor.png',
     method: '',
   ),
   Products(
@@ -345,7 +345,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک، فاقد پارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaFrizz.png',
     method: '',
   ),
   Products(
@@ -362,7 +362,7 @@ List<Products> productsData = [
       'افزایش رطوبت رسانی به سطح پوست سر',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaPlant.png',
     method: '',
   ),
   Products(
@@ -379,7 +379,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک و فاقد پارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaBody.png',
     method: '',
   ),
   Products(
@@ -396,7 +396,7 @@ List<Products> productsData = [
       'فاقد سولفات، فاقد نمک و پارابن',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/vitaSense.png',
     method: '',
   ),
   Products(
@@ -414,7 +414,7 @@ List<Products> productsData = [
       'نرم کننده، التیام بخش مناسب و بازسازی کننده سد دفاعی پوست',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/hydraBody.png',
     method: '',
   ),
   Products(
@@ -432,7 +432,7 @@ List<Products> productsData = [
       'نرم کننده، التیام بخش مناسب و بازسازی کننده سد دفاعی پوست',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/hydraPan.png',
     method: '',
   ),
   Products(
@@ -450,7 +450,7 @@ List<Products> productsData = [
       'نرم کننده، التیام بخش مناسب و بازسازی کننده سد دفاعی پوست',
     ],
     activeIngredients: [],
-    image: 'images/DL-keremSebolift.png',
+    image: 'images/dermalift/hydraFoam.png',
     method: '',
   ),
 
@@ -610,6 +610,245 @@ List<Products> productsData = [
     ],
     image: 'image',
     method: 'صبح و عصر بر روی پوست تمیز صورت و گردن به آرامی ماساژ دهید.',
+  ),
+
+  // delano products
+
+  Products(
+    id: 0701,
+    name: 'کرم ضد آفتاب فاقد چربی SPF 50',
+    latinName: 'SUNSCREEN OIL FREE SPF50',
+    categoryId: 1,
+    brandId: 7,
+    discription: [
+      'مناسب برای پوست های چرب و مستعد جوش و آکنه',
+      'ساختاری بسیار سبک و محافظت بالا در برابر تاثیرات مخرب اشعه های مضر UVA و UVB',
+      'خاصیت ضد میکروبی و تنظیم کننده ترشح چربی پوست',
+      'دارای خاصیت مات کنندگی و ضد براق پوست',
+      'مقاوم در برابر تعریق',
+    ],
+    activeIngredients: [],
+    image: 'image',
+    method:
+        'نیم ساعت قبل از قرار گرفتن در معرض اشعه خورشید، روی پوست تمیز ماساژ داده و هر سه تا چهار ساعت یکبار آن را تجدید کنید.',
+  ),
+  Products(
+    id: 0702,
+    name: 'کرم روشن کننده روز با SPF 15',
+    latinName: 'HYDRATING DAY CREAM',
+    categoryId: 1,
+    brandId: 7,
+    discription: [
+      'این کرم روند بازسازی سلولها را بهبود می بخشد و سطح پوست را نرم و صاف می کند که بافت پوست را ترمیم می کند',
+      'این محصول مناسب برای پوستهای نرمال و خشک می باشد',
+      'دارای فاکتور حفاظتی مناسب در مقابل اشعه مضر آفتاب',
+      'روند پیری پوست را کند می کند و همچنین از آزاد شدن برخی آنزیمها جلوگیری می کند که باعث پیشگیری از التهابها می شود',
+    ],
+    activeIngredients: [
+      'گلیسرین',
+      'عصاره هیدرولیز شده جوجوبا',
+      'بیزابولول',
+      'توکوفریل استات',
+      'مشتق ویتامین سی',
+      'عصاره نارون کوهی',
+    ],
+    image: 'image',
+    method:
+        'هر روز صبح بر روی پوست تمیز استفاده شود. با حرکت دایره ای به آرامی به سمت بالا ماساژ دهید تا کاملا جذب پوست شود.',
+  ),
+  Products(
+    id: 0703,
+    name: 'ژل لایه بردار شب AHA 15%',
+    latinName: 'AHA 15% NIGHT GEL',
+    categoryId: 3,
+    brandId: 7,
+    discription: [
+      'ژل لایه بردار قوی و کنترل کننده ضخامت لایه شاخی پوست',
+      'ضد چروک همراه با خاصیت جوانسازی پوست',
+      'لایه بردار و از بین برنده سلولهای سطحی مرده پوست',
+      'کاهش چشمگیر چروکهای ناشی از افزایش سن در ناحیه صورت و گردن',
+      'افزایش شفافیت و روشن کننده رنگ پوست',
+      'محرک ساخت کلاژن و پیشگیری از افتادگی پوست',
+      'حاوی ترکیبات مغذی و رطوبت رسان قوی',
+      'تنظیم PH پوست',
+      'به دلیل داشتن فرم ژل فاقد چربی بوده و مناسب انواع پوست (حتی پوستهای چرب و مختلط) می باشد',
+    ],
+    activeIngredients: [
+      'گلایکولیک اسید',
+      'عصاره گل بابونه',
+      'عصاره آلوئه ورا',
+      'عصاره کاملیا',
+      'سدیم هیالورونات',
+      'پنتنول',
+    ],
+    image: 'image',
+    method:
+        'شبها مقدار کمی از کرم را روی پوست تمیز ماساژ دهید و در طول روز حتما از ضد آفتاب مناسب پوست استفاده نمایید.',
+  ),
+  Products(
+    id: 0704,
+    name: 'شامپو ضد ریزش موی خشک (بیوتین پلاس)',
+    latinName: 'ANTI-HAIR LOSS SHAMPOO BIOTIN+',
+    categoryId: 2,
+    brandId: 7,
+    discription: [
+      'شامپو ضد ریزش موی خشک به عنوان یک شامپوی کنترل کننده ریزش مو و تقویت کننده جهت انواع الگوی ریزش موی خشک مناسب می باشد',
+      'بیوتین موجود در این شامپو باعث تقویت فولیکولها می گردد و به بهبود تارهای آسیب دیده کمک شایانی می نماید',
+      'این شامپو فاقد سولفات بوده و به ساقه مو آسیبی نمی رساند',
+    ],
+    activeIngredients: [
+      'پروتئین هیدرولیز شده سویا',
+      'پروتئین هیدرولیز شده ذرت',
+      'پروتئین هیدرولیز شده گندم',
+      'روغن سبوس برج',
+      'بیوتین',
+      'توکوفرول (ویتامین ای)',
+    ],
+    image: 'image',
+    method:
+        'مقدار مناسبی از شامپو را به مدت 2 تا 3 دقیقه بر روی موهای مرطوب ماساژ دهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
+  ),
+
+  // MILITO products
+  Products(
+    id: 0301,
+    name: 'لوسیون مناسب پوست های مستعد آکنه',
+    latinName: 'Ultra Anti Acne',
+    categoryId: 7,
+    brandId: 3,
+    discription: [
+      'این لوسیون با دارا بودن مواد فعال میکرو لایه بردار، برای رفع جوشها و دانه های سر سیاه سطح پوست های چرب و مستعد آکنه مناسب است',
+      'کنترل کننده چربی و برق اضافی پوست',
+      'این محلول حاوی کمپلکس ERYTHATE 5.2% است که دارای مواد آنتی باکتریال و ضد التهاب می باشد',
+      'محو کننده و خشک کننده جوشها و کنترل قرمزی و التهاب پوست',
+    ],
+    activeIngredients: [
+      'zinc pca 0.5%',
+      'هیالورونیک اسید 3%',
+      'سدیم سالیسیلات 2%',
+      'آلانتوئین',
+      'کمپلکس ERYTHATE 5.2%',
+      'بیزابولول',
+    ],
+    image: 'image',
+    method:
+        'روزانه و در طی دو نبت صبح و عصر مقداری از لوسیون آنتی آکنه را به طور مستقیم یا با استفاده از پد روی تمام نقاط مد نظر مالیده و به آرامی ماساژ دهید. از تماس لوسیون با پوست نازک اطراف چشم و سطوح مخاطی پوست حتما جلوگیری شود.',
+  ),
+
+  Products(
+    id: 0302,
+    name: 'کرم ترمیم کننده پوست های آسیب دیده',
+    latinName: 'Ultra Repair Cream',
+    categoryId: 1,
+    brandId: 3,
+    discription: [
+      'بازسازی سلولهای پوستی',
+      'جلوگیری از التهاب، عفونت و رشد باکتری در نواحی مستعد آلودگی',
+      'کمک به بهبود بیماریهای پوستی نظیر اگزما و درماتیت آتوپیک',
+      'رفع التهابات ناشی از لیزر، تزریق و لایه برداری، آفتاب سوختی، اصلاح و خشکی پوست',
+    ],
+    activeIngredients: [
+      'هیالورونیک اسید',
+      'شی باتر',
+      'روغن بادام',
+      'ویتامین E',
+      'تیتانیوم دی اکساید',
+    ],
+    image: 'image',
+    method:
+        'دو تا سه بار در روز بر روی نقاط مورد نظر به صورت ضربه ای بمالید. برای التیام پوستهای حساس، نقاط آفتاب سوخته، لبهای ترک خورده و یا حتی جهت درمان پوستهای تحریک شده پس از اصلاح می توان از این کرم استفاده کرد.',
+  ),
+
+  Products(
+    id: 0303,
+    name: 'کرم درمان خشکی و اگزا',
+    latinName: 'Eczema Therapy',
+    categoryId: 1,
+    brandId: 3,
+    discription: [
+      'مناسب برای پوستهای خشک، خیلی خشک یا در معرض آتوپی و مبتلا به اگزمای صورت و بدن در نوزادان، کودکان و بزرگسالان',
+      'آبرسانی عمیق به پوست',
+      'کاهش خارش، احساس کشیدگی پوست و التهاب در افراد با اگزما و خارش شدید',
+    ],
+    activeIngredients: [
+      'استرهای هیدرولیز شده جوجوبا',
+      'آلوئه ورا',
+      'ویتامین E و اوره',
+      'پوسته قهوه عربی',
+      'آرژنین',
+      'بیزابولول',
+      'فندق افسونگر',
+      'فالوپیا جاپنیکا',
+    ],
+    image: 'image',
+    method:
+        'روزانه 2 بار، صبح و شب، مقدار کافی از فرآورده را بر روی پوست تمیز و خشک صورت و گردن مالیده و به آرامی ماساژ دهید. این محصول فاقد عطر، رنگ و پروپیلن گلیکول است. همچنین دارای بافت چرب با جذب بسیار سریع می باشد.',
+  ),
+
+// adelio products
+  Products(
+    id: 1001,
+    name: 'ماسک پروتئین و مغذی مو',
+    latinName: 'PROTEIN TREATMENT MASK',
+    categoryId: 9,
+    brandId: 10,
+    discription: [
+      'تامین رطوبت و افزایش انعطاف پذیری مو',
+      'حاوی بالاترین میزان مواد مغذی و پروتئینی',
+      'احیا و افزایش لطافت موها',
+      'مناسب موهای ضعیف و آسیب دیده، تقویت ساختار مو',
+      'افزایش درخشش مو',
+    ],
+    activeIngredients: [],
+    image: 'image',
+    method:
+        'پس از شامپو کردن، ساقه موها را به ماسک آغشته نمایید و پس از 5 دقیقه موهای خود را آبکشی نمایید.',
+  ),
+
+  Products(
+    id: 1002,
+    name: 'روغن آرگان',
+    latinName: 'ARGAN OIL',
+    categoryId: 8,
+    brandId: 10,
+    discription: [
+      'تغذیه کننده و تقویت کننده مو',
+      'افزایش شفافیت و درخشندگی مو',
+      'مناسب برای انواع مو، به ویژه موهای خشک و آسیب دیده',
+      'سبک و با جذب سریع، بدون برجا گذاشتن اثر چربی',
+      'ماندگاری نرمی مو تا 24 ساعت',
+      'مناسب استفاده روزانه',
+    ],
+    activeIngredients: [],
+    image: 'image',
+    method:
+        'روی ساقه موهای مرطوب اسپری کنید. می توانید بعد از هربار شست و شوی مو و یا هر زمان که مو نیاز به تغذیه و رطوبت داشت، از آن استفاده کنید.',
+  ),
+
+// LaQuinta products
+  Products(
+    id: 0501,
+    name: 'سرم ویتامین C',
+    latinName: 'VIT C SERUM',
+    categoryId: 4,
+    brandId: 5,
+    discription: [
+      'محصولی منحصر به فرد با عملکرد چندگانه جهت جوانسازی پوست',
+      'درخشان و روشن کننده پوست',
+      'کم رنگ کننده لکهای قهوه ای و روشن کننده پوست',
+      'افزایش تقویت و خاصیت کشسانی پوست',
+      'تقویت دیواره مویرگهای زیرپوستی',
+      'آزادسازی رادیکالهای آزاد زیر پوست',
+      'تحریک روند تولید کلاژن و در نتیجه کندتر شدن فرآیند پیری',
+      'انرژی رسان، آبرسان و شاداب کننده پوست',
+    ],
+    activeIngredients: [
+      'کمپلکس ترکیبی ویتامین C',
+      'عصاره پرتقال',
+      'ترکیبات پپتیدی',
+    ],
+    image: 'image',
+    method: 'صبح و شب بر روی پوست تمیز ماساژ داده شود.',
   ),
 //   Products(
 //     id: ,
