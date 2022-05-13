@@ -75,7 +75,7 @@ class BrandScrollView extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) {
                               return ProductDetiles(
-                                products: productList[index],
+                                product: productList[index],
                               );
                             },
                           ),
