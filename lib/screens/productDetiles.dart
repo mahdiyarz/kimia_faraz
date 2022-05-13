@@ -72,7 +72,7 @@ class ProductDetiles extends StatelessWidget {
                   ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    itemCount: products.discription.length,
+                    itemCount: products.points.length,
                     itemBuilder: (context, index) => Directionality(
                       textDirection: TextDirection.rtl,
                       child: Padding(
@@ -91,7 +91,7 @@ class ProductDetiles extends StatelessWidget {
                             ),
                             Flexible(
                               child: Text(
-                                products.discription[index],
+                                products.points[index],
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   fontSize: 16,
@@ -144,7 +144,8 @@ class ProductDetiles extends StatelessWidget {
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
-                                          products.activeIngredients[index],
+                                          products.activeIngredients[index]
+                                              ['ingredientName'] as String,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,

@@ -59,32 +59,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/delano.png
-    - images/laQuinta.png
-    - images/adelio.png
-    - images/bioRich.png
-    - images/milito.png
-    - images/DL-keremSebolift.png
-    - images/dermalift/dermalift.png
-    - images/pleasant.png
-    - images/stemCell.png
-    - images/totalDerm.png
-    - images/dermalift/melaliftCream.png
-    - images/dermalift/seboliftCream.png
-    - images/dermalift/vitaliftCream.png
-    - images/dermalift/rosaliftCream.png
-    - images/dermalift/fermaliftCream.png
-    - images/dermalift/hydraliftCream.png
-    - images/dermalift/vitaGrow.png
-    - images/dermalift/vitaKer.png
-    - images/dermalift/vitaColor.png
-    - images/dermalift/vitaFrizz.png
-    - images/dermalift/vitaPlant.png
-    - images/dermalift/vitaBody.png
-    - images/dermalift/vitaSense.png
-    - images/dermalift/hydraBody.png
-    - images/dermalift/hydraPan.png
-    - images/dermalift/hydraFoam.png
+    - images/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
