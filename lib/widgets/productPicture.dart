@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/product-model.dart';
+import '../widgets/skinType.dart';
+import '../widgets/skinColor.dart';
 
 class ProductPicture extends StatelessWidget {
   Products product;
@@ -34,70 +36,10 @@ class ProductPicture extends StatelessWidget {
                 ),
         ),
         product.skinType.isNotEmpty
-            ? Positioned(
-                right: 0,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 5,
-                    horizontal: 25,
-                  ),
-                  child: Text(
-                    product.skinType,
-                    style: TextStyle(
-                      color: Theme.of(context).canvasColor,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              )
+            ? SkinType(product: product)
             : const SizedBox(),
         product.color.isNotEmpty
-            ? Directionality(
-                textDirection: TextDirection.rtl,
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    top: 30,
-                    right: 20,
-                  ),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        ...product.color
-                            .map((e) => Row(
-                                  children: [
-                                    Container(
-                                      width: 10,
-                                      height: 10,
-                                      decoration: BoxDecoration(
-                                        color: e.contains('روشن')
-                                            ? Colors.indigo
-                                            : e.contains('متوسط')
-                                                ? Colors.green
-                                                : Colors.white10,
-                                        border: Border.all(
-                                          color: Colors.black26,
-                                          width: 1,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text(
-                                      e,
-                                      style: TextStyle(
-                                        color: Theme.of(context).canvasColor,
-                                        fontSize: 12,
-                                        // fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ))
-                            .toList(),
-                      ],
-                    ),
-                  ),
-                ),
-              )
+            ? SkinColor(product: product)
             : const SizedBox(),
         Positioned(
           bottom: 0,
