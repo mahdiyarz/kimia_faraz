@@ -15,10 +15,10 @@ class ProductDetiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(product.latinName),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: Text(product.latinName),
+      //   centerTitle: true,
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [

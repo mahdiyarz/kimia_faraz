@@ -10,20 +10,18 @@ class SkinType extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      right: 0,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 5,
-          horizontal: 25,
-        ),
-        child: Text(
-          product.skinType,
-          style: TextStyle(
-            color: Theme.of(context).canvasColor,
-            fontSize: 13,
-            fontWeight: FontWeight.bold,
-          ),
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 30,
+        right: 20,
+      ),
+      child: Text(
+        product.skinType,
+        textAlign: TextAlign.right,
+        style: TextStyle(
+          color: Theme.of(context).canvasColor,
+          fontSize: 13,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );

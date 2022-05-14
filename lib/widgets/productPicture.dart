@@ -13,6 +13,7 @@ class ProductPicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.topRight,
       children: [
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 10),
