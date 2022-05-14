@@ -27,10 +27,13 @@ class SkinColor extends StatelessWidget {
                           height: 10,
                           decoration: BoxDecoration(
                             color: e.contains('روشن')
-                                ? Colors.indigo
+                                ? const Color.fromARGB(255, 246, 209, 141)
                                 : e.contains('متوسط')
-                                    ? Colors.green
-                                    : Colors.white10,
+                                    ? const Color.fromARGB(255, 240, 180, 68)
+                                    : e.contains('تیره')
+                                        ? const Color.fromARGB(
+                                            255, 182, 124, 14)
+                                        : Colors.white10,
                             border: Border.all(
                               color: Colors.black26,
                               width: 1,
