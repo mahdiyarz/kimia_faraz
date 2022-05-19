@@ -30,7 +30,7 @@ class SkinColor extends StatelessWidget {
                                 ? const Color.fromARGB(255, 246, 209, 141)
                                 : e.contains('متوسط')
                                     ? const Color.fromARGB(255, 240, 180, 68)
-                                    : e.contains('تیره')
+                                    : e.contains('تیره') || e.contains('طلایی')
                                         ? const Color.fromARGB(
                                             255, 182, 124, 14)
                                         : Colors.white10,
