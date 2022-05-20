@@ -45,6 +45,7 @@ class ProductDetiles extends StatelessWidget {
                   // Name of the product
                   Text(
                     product.name,
+                    textDirection: TextDirection.rtl,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Theme.of(context).canvasColor,
@@ -52,6 +53,42 @@ class ProductDetiles extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  // Descriptions are here
+                  product.description.isNotEmpty
+                      ? Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            margin: const EdgeInsets.only(
+                              top: 15,
+                              left: 5,
+                              right: 5,
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 3,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.white24,
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ...product.description
+                                    .map((e) => Text(
+                                          e,
+                                          style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black54,
+                                          ),
+                                        ))
+                                    .toList()
+                              ],
+                            ),
+                          ),
+                        )
+                      : const SizedBox(),
                   // Points are here
                   Points(product: product),
                   // Active ingredients are here
@@ -64,6 +101,22 @@ class ProductDetiles extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 3),
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          elevation: 8,
+          backgroundColor: Theme.of(context).canvasColor,
+          mini: true,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }
