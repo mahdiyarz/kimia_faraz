@@ -40,37 +40,56 @@ class ActiveIngredients extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     separatorBuilder: (context, index) =>
                         const SizedBox(width: 1),
-                    itemBuilder: (context, index) => InkWell(
-                      onTap: product.activeIngredients[index]['ingredientInfo']!
-                              .isNotEmpty
-                          ? () {
-                              return _showModalBottomSheet(
-                                  context,
-                                  product.activeIngredients[index]
-                                      ['ingredientName'] as String,
-                                  product.activeIngredients[index]
-                                      ['ingredientInfo'] as String);
-                            }
-                          : () {},
-                      child: Center(
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          elevation: 5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              product.activeIngredients[index]['ingredientName']
-                                  as String,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).canvasColor,
+                    itemBuilder: (context, index) => Stack(
+                      children: [
+                        InkWell(
+                          onTap: product
+                                  .activeIngredients[index]['ingredientInfo']!
+                                  .isNotEmpty
+                              ? () {
+                                  return _showModalBottomSheet(
+                                      context,
+                                      product.activeIngredients[index]
+                                          ['ingredientName'] as String,
+                                      product.activeIngredients[index]
+                                          ['ingredientInfo'] as String);
+                                }
+                              : () {},
+                          child: Center(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              elevation: 5,
+                              child: SizedBox(
+                                height: 30,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Center(
+                                    child: Text(
+                                      product.activeIngredients[index]
+                                          ['ingredientName'] as String,
+                                      textDirection: TextDirection.rtl,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Theme.of(context).canvasColor,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+                        product.activeIngredients[index]['ingredientInfo']!
+                                .isNotEmpty
+                            ? Icon(
+                                Icons.info_rounded,
+                                color: Theme.of(context).colorScheme.primary,
+                                size: 15,
+                              )
+                            : const SizedBox(),
+                      ],
                     ),
                   ),
                 )
@@ -86,7 +105,7 @@ class ActiveIngredients extends StatelessWidget {
         context: ctx,
         builder: (_) {
           return Container(
-            color: Colors.white,
+            color: Theme.of(ctx).colorScheme.primary,
             padding: const EdgeInsets.symmetric(
               horizontal: 10,
               vertical: 8,
@@ -94,13 +113,16 @@ class ActiveIngredients extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Text(
-                    ingredientName,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(ctx).canvasColor,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      ingredientName,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(ctx).colorScheme.primaryContainer,
+                      ),
                     ),
                   ),
                   Text(
@@ -110,6 +132,7 @@ class ActiveIngredients extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16.5,
+                      color: Colors.white70,
                     ),
                   ),
                 ],
