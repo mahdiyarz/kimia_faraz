@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
-import '../screens/product_detiles.dart';
+import '../screens/product_details.dart';
 
 class BrandScrollView extends StatelessWidget {
-  String brandName, brandImage, brandLatin;
-  List<Products> productList;
+  final String brandName, brandImage, brandLatin;
+  final List<Products> productList;
 
-  BrandScrollView({
+  const BrandScrollView({
     Key? key,
     required this.brandName,
     required this.brandLatin,
@@ -74,7 +74,7 @@ class BrandScrollView extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return ProductDetiles(
+                              return ProductDetails(
                                 product: productList[index],
                               );
                             },

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/product_model.dart';
 
 class SkinColor extends StatelessWidget {
-  Products product;
-  SkinColor({
+  final Products product;
+  const SkinColor({
     Key? key,
     required this.product,
   }) : super(key: key);

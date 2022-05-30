@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/product_model.dart';
 
 class Points extends StatelessWidget {
-  Products product;
-  Points({
+  final Products product;
+  const Points({
     Key? key,
     required this.product,
   }) : super(key: key);

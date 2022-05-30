@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/product_model.dart';
 
 class Method extends StatelessWidget {
-  Products product;
-  Method({
+  final Products product;
+  const Method({
     Key? key,
     required this.product,
   }) : super(key: key);

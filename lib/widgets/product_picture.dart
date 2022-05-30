@@ -4,8 +4,8 @@ import 'skin_type.dart';
 import 'skin_color.dart';
 
 class ProductPicture extends StatelessWidget {
-  Products product;
-  ProductPicture({
+  final Products product;
+  const ProductPicture({
     Key? key,
     required this.product,
   }) : super(key: key);
