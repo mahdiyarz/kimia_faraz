@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/product-model.dart';
+import '../models/product_model.dart';
 
 class SkinType extends StatelessWidget {
   Products product;

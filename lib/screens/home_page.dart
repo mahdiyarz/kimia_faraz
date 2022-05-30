@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/product-model.dart';
-import '../widgets/brandScrollView.dart';
+import '../models/product_model.dart';
+import '../widgets/brand_scroll_view.dart';
 
 import '../DATA_BASE.dart';
 

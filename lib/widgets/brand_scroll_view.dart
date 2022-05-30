@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/product-model.dart';
-import '../screens/productDetiles.dart';
+import '../models/product_model.dart';
+import '../screens/product_detiles.dart';
 
 class BrandScrollView extends StatelessWidget {
   String brandName, brandImage, brandLatin;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/product-model.dart';
-import '../widgets/skinType.dart';
-import '../widgets/skinColor.dart';
+import '../models/product_model.dart';
+import 'skin_type.dart';
+import 'skin_color.dart';
 
 class ProductPicture extends StatelessWidget {
   Products product;

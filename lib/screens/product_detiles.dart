@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../models/product-model.dart';
+import '../models/product_model.dart';
 import '../widgets/points.dart';
-import '../widgets/productPicture.dart';
-import '../widgets/activeIngredients.dart';
+import '../widgets/product_picture.dart';
+import '../widgets/active_ingredients.dart';
 import '../widgets/method.dart';
 
 class ProductDetiles extends StatelessWidget {
