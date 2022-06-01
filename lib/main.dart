@@ -1,20 +1,25 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
-import 'package:device_preview/device_preview.dart';
+
+import './screens/home.dart';
+
+//! Device Preview imports
+// import 'package:flutter/foundation.dart';
+// import 'package:device_preview/device_preview.dart';
 
 void main() {
+  //* Portrait Settings
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
   runApp(
+    //* This is regular app without Device Preview Settings
     MaterialApp(
       home: const Directionality(
         textDirection: TextDirection.rtl,
-        child: HomePage(),
+        child: Home(),
       ),
       theme: ThemeData(
         canvasColor: const Color.fromARGB(255, 101, 93, 138),

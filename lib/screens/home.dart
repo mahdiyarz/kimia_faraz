@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kimia_faraz/DATA_BASE.dart';
 
 import '../DATA_BASE.dart';
+import './brand_details.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -10,7 +10,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('کیمیا فراز گیل'),
+        title: const Text(
+          'کیمیا فراز گیل',
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,18 +27,35 @@ class Home extends StatelessWidget {
           ),
           itemCount: brandData.length,
           itemBuilder: (context, index) => InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: ((context) => BrandDetails(
+                        brandId: brandData[index].id,
+                      )),
+                ),
+              );
+            },
             child: Card(
+                color: Theme.of(context).colorScheme.primaryContainer,
                 elevation: 8,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.import_export),
+                    Flexible(
+                      child: Image.asset(brandData[index].image),
+                    ),
                     Text(
                       brandData[index].name,
                       textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Theme.of(context).canvasColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                     ),
                   ],
                 )),
