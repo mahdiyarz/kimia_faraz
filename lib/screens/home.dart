@@ -43,10 +43,14 @@ class Home extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Flexible(
-                      child: Image.asset(brandData[index].image),
+                      child: Container(
+                          decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(brandData[index].image),
+                        ),
+                      )),
                     ),
                     Text(
                       brandData[index].name,
