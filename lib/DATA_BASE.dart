@@ -58,7 +58,7 @@ List<Brands> brandData = [
     id: 2,
     name: "استم سل",
     latinName: "Stem Cell",
-    image: "images/brands/stemCell.png",
+    image: "images/brands/stemcell.png",
   ),
   Brands(
     id: 3,
@@ -70,13 +70,13 @@ List<Brands> brandData = [
     id: 5,
     name: "لاکوئینتا",
     latinName: "La Quinta",
-    image: "images/brands/laQuinta.png",
+    image: "images/brands/la_quinta.png",
   ),
   Brands(
     id: 6,
     name: "توتال درم",
     latinName: "Total Derm",
-    image: "images/brands/totalDerm.png",
+    image: "images/brands/total_derm.png",
   ),
   Brands(
     id: 7,
@@ -88,7 +88,7 @@ List<Brands> brandData = [
     id: 8,
     name: "بایوریچ",
     latinName: "Bio Reach",
-    image: "images/brands/bioRich.png",
+    image: "images/brands/bio_reach.png",
   ),
   Brands(
     id: 9,
@@ -106,31 +106,43 @@ List<Brands> brandData = [
     id: 4,
     name: "راکوتن",
     latinName: "Racuten",
-    image: "",
+    image: "images/brands/racuten.png",
   ),
   Brands(
     id: 11,
     name: "فارمالاین",
     latinName: "PharmaLine",
-    image: "",
+    image: "images/brands/pharma_line.png",
   ),
   Brands(
     id: 12,
     name: "جوجو",
     latinName: "JOJO",
-    image: "",
+    image: "images/brands/jojo.png",
   ),
   Brands(
     id: 13,
     name: "رینکون",
     latinName: "Rinkon",
-    image: "",
+    image: "images/brands/rinkon.png",
   ),
   Brands(
     id: 14,
     name: "بتیس",
     latinName: "Betis",
-    image: "",
+    image: "images/brands/betis.png",
+  ),
+  Brands(
+    id: 15,
+    name: "رین استایل",
+    latinName: "Rain Style",
+    image: "images/brands/rs.png",
+  ),
+  Brands(
+    id: 16,
+    name: "فاین",
+    latinName: "Fine",
+    image: "images/brands/fine.png",
   ),
 ];
 
