@@ -23,7 +23,7 @@ class BrandScrollView extends StatelessWidget {
           pinned: true,
           snap: true,
           floating: true,
-          expandedHeight: MediaQuery.of(context).size.height / 1.2,
+          expandedHeight: MediaQuery.of(context).size.height / 1.5,
           flexibleSpace: FlexibleSpaceBar(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -45,42 +45,45 @@ class BrandScrollView extends StatelessWidget {
           delegate: productList.isNotEmpty
               ? SliverChildBuilderDelegate(
                   (context, int index) {
-                    return ListTile(
-                      title: Text(productList[index].name,
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                          )),
-                      subtitle: Text(productList[index].latinName,
-                          style: TextStyle(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onPrimary
-                                .withAlpha(80),
-                          )),
-                      leading: Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8)),
-                        child: productList[index].image.contains('.png')
-                            ? Image.asset(productList[index].image)
-                            : const Icon(
-                                Icons.photo_size_select_actual_outlined,
-                                size: 30),
+                    return Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: ListTile(
+                        title: Text(productList[index].name,
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            )),
+                        subtitle: Text(productList[index].latinName,
+                            style: TextStyle(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onPrimary
+                                  .withAlpha(80),
+                            )),
+                        leading: Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8)),
+                          child: productList[index].image.contains('.png')
+                              ? Image.asset(productList[index].image)
+                              : const Icon(
+                                  Icons.photo_size_select_actual_outlined,
+                                  size: 30),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return ProductDetails(
+                                  product: productList[index],
+                                );
+                              },
+                            ),
+                          );
+                        },
                       ),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return ProductDetails(
-                                product: productList[index],
-                              );
-                            },
-                          ),
-                        );
-                      },
                     );
                   },
                   childCount: productList.length,
