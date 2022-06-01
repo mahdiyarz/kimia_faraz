@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-// Remove those products which don't hove any pictures
+//! Remove those products which don't hove any pictures
   int get brandLength {
     int finalLength = 0;
     int length = brandData.length;
