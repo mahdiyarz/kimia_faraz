@@ -1,7 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
-import './screens/home.dart';
+import './screens/brand_category.dart';
+import './screens/home_page_tab.dart';
 
 //! Device Preview imports
 // import 'package:flutter/foundation.dart';
@@ -14,13 +15,23 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  //* This widget is the root of your application.
+
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
     //* This is regular app without Device Preview Settings
-    MaterialApp(
-      home: const Directionality(
-        textDirection: TextDirection.rtl,
-        child: Home(),
-      ),
+    return MaterialApp(
       theme: ThemeData(
         canvasColor: const Color.fromARGB(255, 101, 93, 138),
         colorScheme: ColorScheme.fromSwatch().copyWith(
@@ -33,19 +44,22 @@ void main() {
           primaryContainer: const Color.fromARGB(255, 253, 206, 185),
         ),
       ),
-    ),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => const HomePageTab(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => const BrandCategory());
+      },
+    );
 
     //* This is Device Preview Settings
-    // DevicePreview(
+    // return DevicePreview(
     //   enabled: !kReleaseMode,
     //   builder: (context) => MaterialApp(
     //     useInheritedMediaQuery: true,
     //     locale: DevicePreview.locale(context),
     //     builder: DevicePreview.appBuilder,
-    //     home: const Directionality(
-    //       textDirection: TextDirection.rtl,
-    //       child: HomePage(),
-    //     ),
     //     theme: ThemeData(
     //       canvasColor: const Color.fromARGB(255, 101, 93, 138),
     //       colorScheme: ColorScheme.fromSwatch().copyWith(
@@ -58,7 +72,14 @@ void main() {
     //         primaryContainer: const Color.fromARGB(255, 253, 206, 185),
     //       ),
     //     ),
+    //     initialRoute: '/',
+    //   routes: {
+    //     '/': (ctx) => const HomePageTab(),
+    //   },
+    //   onUnknownRoute: (settings) {
+    //     return MaterialPageRoute(builder: (ctx) => const BrandCategory());
+    //   },
     //   ),
-    // ),
-  );
+    // );
+  }
 }
