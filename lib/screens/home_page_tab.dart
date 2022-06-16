@@ -43,26 +43,44 @@ class _HomePageTabState extends State<HomePageTab> {
           ),
         ),
         centerTitle: true,
+        actions: const [IconButton(onPressed: null, icon: Icon(Icons.search))],
       ),
+      drawer: Drawer(
+          backgroundColor: Colors.black26,
+          elevation: 10,
+          child: Column(
+            children: const [
+              Text('پایگاه های ما'),
+              Text('شماره تماس ها'),
+              Text('طراحی و پیاده سازی: مهدیار'),
+              Text('انبارداری'),
+              Text('ورود به پنل کاربری'),
+              Text('تنظیمات'),
+            ],
+          )),
       body: _pages![_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 15,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
         onTap: _selectPage,
-        unselectedItemColor: Colors.amberAccent,
-        selectedItemColor: Colors.blueAccent,
         currentIndex: _selectedPageIndex,
         type: BottomNavigationBarType.shifting,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.sort_sharp),
             label: 'نوع کالا',
+            backgroundColor: Colors.black45,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.adobe),
             label: 'برندها',
+            backgroundColor: Colors.black12,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark_add),
             label: 'نشان شده ها',
+            backgroundColor: Colors.black45,
           ),
         ],
       ),
