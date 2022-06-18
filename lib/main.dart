@@ -73,12 +73,12 @@ class _MyAppState extends State<MyApp> {
     //       ),
     //     ),
     //     initialRoute: '/',
-    //   routes: {
-    //     '/': (ctx) => const HomePageTab(),
-    //   },
-    //   onUnknownRoute: (settings) {
-    //     return MaterialPageRoute(builder: (ctx) => const BrandCategory());
-    //   },
+    //     routes: {
+    //       '/': (ctx) => const HomePageTab(),
+    //     },
+    //     onUnknownRoute: (settings) {
+    //       return MaterialPageRoute(builder: (ctx) => const BrandCategory());
+    //     },
     //   ),
     // );
   }
