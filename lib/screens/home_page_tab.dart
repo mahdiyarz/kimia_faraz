@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// import '../screens/search_products.dart';
 import '../screens/brand_category.dart';
 import '../screens/favorite_products.dart';
 import '../screens/product_category.dart';
@@ -43,7 +44,17 @@ class _HomePageTabState extends State<HomePageTab> {
           ),
         ),
         centerTitle: true,
-        actions: const [IconButton(onPressed: null, icon: Icon(Icons.search))],
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {
+        //       showSearch(
+        //         context: context,
+        //         delegate: SearchProducts(),
+        //       );
+        //     },
+        //     icon: const Icon(Icons.search),
+        //   ),
+        // ],
       ),
       drawer: Drawer(
           backgroundColor: Colors.black26,
