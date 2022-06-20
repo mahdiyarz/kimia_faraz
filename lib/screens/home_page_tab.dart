@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import '../screens/search_products.dart';
+import '../screens/search_products.dart';
 import '../screens/brand_category.dart';
 import '../screens/favorite_products.dart';
 import '../screens/product_category.dart';
@@ -16,6 +16,12 @@ class _HomePageTabState extends State<HomePageTab> {
   List<Widget>? _pages;
   int _selectedPageIndex = 1;
 
+  void _selectPage(int index) {
+    setState(() {
+      _selectedPageIndex = index;
+    });
+  }
+
   @override
   void initState() {
     _pages = [
@@ -24,12 +30,6 @@ class _HomePageTabState extends State<HomePageTab> {
       const FavoriteProducts(),
     ];
     super.initState();
-  }
-
-  void _selectPage(int index) {
-    setState(() {
-      _selectedPageIndex = index;
-    });
   }
 
   @override
@@ -44,17 +44,14 @@ class _HomePageTabState extends State<HomePageTab> {
           ),
         ),
         centerTitle: true,
-        // actions: [
-        //   IconButton(
-        //     onPressed: () {
-        //       showSearch(
-        //         context: context,
-        //         delegate: SearchProducts(),
-        //       );
-        //     },
-        //     icon: const Icon(Icons.search),
-        //   ),
-        // ],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, SearchProducts.routeName);
+            },
+            icon: const Icon(Icons.search),
+          ),
+        ],
       ),
       drawer: Drawer(
           backgroundColor: Colors.black26,
