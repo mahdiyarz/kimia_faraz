@@ -39,12 +39,10 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
             parent: _controller as Animation<double>, curve: Curves.easeOut));
 
     _controller!.forward();
-    _controller!.forward();
   }
 
   @override
   void dispose() {
-    _controller!.dispose();
     _controller!.dispose();
     super.dispose();
   }
@@ -207,7 +205,7 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
                         ),
                         child: Center(
                           child: Icon(
-                            Icons.search,
+                            Icons.settings,
                             size: _width / 17,
                             color: Colors.black.withOpacity(.6),
                           ),
