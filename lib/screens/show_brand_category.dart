@@ -7,6 +7,8 @@ import '../screens/brand_details.dart';
 import '../DATA_BASE.dart';
 
 class ShowBrandCategory extends StatefulWidget {
+  const ShowBrandCategory({Key? key}) : super(key: key);
+
   @override
   State<ShowBrandCategory> createState() => _ShowBrandCategoryState();
 }
