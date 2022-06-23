@@ -3,7 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../screens/show_products_category.dart';
 import '../screens/show_brand_category.dart';
+import '../screens/show_favorites.dart';
+import '../screens/show_search.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -26,9 +29,9 @@ class _RootPageState extends State<RootPage> {
   void initState() {
     _pages = [
       const ShowBrandCategory(),
-      ShowBrandCategory(),
-      ShowBrandCategory(),
-      ShowBrandCategory(),
+      ShowProductsCategory(),
+      ShowFavorites(),
+      ShowSearch(),
     ];
     super.initState();
   }
