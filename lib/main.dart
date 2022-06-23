@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import './screens/brand_category.dart';
 import './screens/home_page_tab.dart';
-import './screens/search_products.dart';
 
 //! Device Preview imports
 // import 'package:flutter/foundation.dart';
@@ -48,7 +47,6 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/': (ctx) => const HomePageTab(),
-        SearchProducts.routeName: (context) => const SearchProducts(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (ctx) => const BrandCategory());
@@ -77,7 +75,7 @@ class _MyAppState extends State<MyApp> {
     //     initialRoute: '/',
     //     routes: {
     //       '/': (ctx) => const HomePageTab(),
-    //       SearchProducts.routeName: (context) => SearchProducts(),
+    //
     //     },
     //     onUnknownRoute: (settings) {
     //       return MaterialPageRoute(builder: (ctx) => const BrandCategory());

@@ -47,7 +47,10 @@ class _HomePageTabState extends State<HomePageTab> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SearchProducts.routeName);
+              showSearch(
+                context: context,
+                delegate: SearchProducts(),
+              );
             },
             icon: const Icon(Icons.search),
           ),
