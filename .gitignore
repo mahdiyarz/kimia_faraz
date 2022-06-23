@@ -1,6 +1,8 @@
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
+.flutter-plugins-dependencies
+lib/generated_plugin_registrant.dart
 .dart_tool/
 .packages
 build/

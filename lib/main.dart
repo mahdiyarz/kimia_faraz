@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import '../screens/show_brand_category.dart';
 
 import './screens/home.dart';
 
@@ -17,9 +18,9 @@ void main() {
   runApp(
     //* This is regular app without Device Preview Settings
     MaterialApp(
-      home: const Directionality(
+      home: Directionality(
         textDirection: TextDirection.rtl,
-        child: Home(),
+        child: ShowBrandCategory(),
       ),
       theme: ThemeData(
         canvasColor: const Color.fromARGB(255, 101, 93, 138),
