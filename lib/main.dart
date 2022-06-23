@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:kimia_faraz/screens/root_page.dart';
 import '../screens/show_brand_category.dart';
 
 import './screens/home.dart';
@@ -20,7 +21,7 @@ void main() {
     MaterialApp(
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: ShowBrandCategory(),
+        child: RootPage(),
       ),
       theme: ThemeData(
         canvasColor: const Color.fromARGB(255, 101, 93, 138),
