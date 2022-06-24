@@ -1,9 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:kimia_faraz/screens/root_page.dart';
-import '../screens/show_brand_category.dart';
 
-import './screens/home.dart';
+import '../screens/root_page.dart';
 
 //! Device Preview imports
 // import 'package:flutter/foundation.dart';
@@ -24,7 +22,7 @@ void main() {
         child: RootPage(),
       ),
       theme: ThemeData(
-        canvasColor: const Color.fromARGB(255, 101, 93, 138),
+        // canvasColor: const Color.fromARGB(255, 101, 93, 138),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: const Color.fromARGB(255, 120, 151, 171),
           onPrimary: const Color.fromARGB(255, 255, 255, 255),
@@ -46,7 +44,7 @@ void main() {
     //     builder: DevicePreview.appBuilder,
     //     home: const Directionality(
     //       textDirection: TextDirection.rtl,
-    //       child: HomePage(),
+    //       child: RootPage(),
     //     ),
     //     theme: ThemeData(
     //       canvasColor: const Color.fromARGB(255, 101, 93, 138),
