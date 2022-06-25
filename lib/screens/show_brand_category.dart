@@ -177,7 +177,7 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
                 '',
                 null,
               ),
-              SizedBox(height: _width / 130),
+              SizedBox(height: _width / 5),
             ],
           ),
 
@@ -317,9 +317,14 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
                   height: _width / 3.6,
                   width: _width / 2,
                   decoration: BoxDecoration(
-                    color: color.withOpacity(.3),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
+                      color: color.withOpacity(.3),
+                      borderRadius: BorderRadius.circular(15),
+                      gradient: RadialGradient(
+                        colors: [
+                          Colors.white10,
+                          color,
+                        ],
+                      )),
                   child: Image.asset(
                     image,
                     fit: BoxFit.contain,
