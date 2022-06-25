@@ -78,6 +78,7 @@ class _ShowSearchState extends State<ShowSearch> {
                       ],
                     )
                   : ListView.builder(
+                      padding: EdgeInsets.only(bottom: _width / 5),
                       itemCount: products.length,
                       itemBuilder: (context, index) {
                         return ListTile(
@@ -153,7 +154,6 @@ class _ShowSearchState extends State<ShowSearch> {
                       },
                     ),
             ),
-            const SizedBox(height: 60)
           ],
         ),
       ),
