@@ -163,8 +163,13 @@ class _ShowSearchState extends State<ShowSearch> {
                   child: PhysicalModel(
                     color: Colors.white,
                     elevation: 5,
-                    shadowColor: Color(0xff040039).withOpacity(.2),
-                    borderRadius: BorderRadius.circular(20),
+                    shadowColor: const Color(0xff040039).withOpacity(.2),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(8),
+                      bottomRight: Radius.circular(20),
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(20),
+                    ),
                     child: InkWell(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -330,84 +335,6 @@ class _ShowSearchState extends State<ShowSearch> {
                     ),
                   ),
                 );
-                // Container(
-                //   margin: const EdgeInsets.fromLTRB(15, 0, 15, 5),
-                //   child: PhysicalModel(
-                //     color: Colors.white,
-                //     elevation: 18,
-                //     shadowColor: Color(0xff040039).withOpacity(.2),
-                //     borderRadius: BorderRadius.circular(20),
-                //     child: ListTile(
-                //       onTap: () {},
-                //       title: Text(products[index].name),
-                //       subtitle: Text(products[index].fullLatinName),
-                //       trailing: Container(
-                //         alignment: Alignment.center,
-                //         height: _width * .15,
-                //         width: _width * .15,
-                //         decoration: BoxDecoration(
-                //           color: Theme.of(context)
-                //               .colorScheme
-                //               .secondary
-                //               .withOpacity(.3),
-                //           borderRadius: BorderRadius.circular(20),
-                //         ),
-                //         child: products[index].id >= 0101 &&
-                //                 products[index].id <= 0199
-                //             ? const Text('درمالیفت')
-                //             : products[index].id >= 0201 &&
-                //                     products[index].id <= 0299
-                //                 ? const Text('استم سل')
-                //                 : products[index].id >= 0301 &&
-                //                         products[index].id <= 0399
-                //                     ? const Text('میلیتو')
-                //                     : products[index].id >= 0401 &&
-                //                             products[index].id <= 0499
-                //                         ? const Text('راکوتن')
-                //                         : products[index].id >= 0501 &&
-                //                                 products[index].id <= 0599
-                //                             ? const Text('لاکوئینتا')
-                //                             : products[index].id >= 0601 &&
-                //                                     products[index].id <= 0699
-                //                                 ? const Text('توتال درم')
-                //                                 : products[index].id >= 0701 &&
-                //                                         products[index].id <=
-                //                                             0799
-                //                                     ? const Text('دلانو')
-                //                                     : products[index].id >= 0801 &&
-                //                                             products[index].id <=
-                //                                                 0899
-                //                                         ? const Text('بایوریچ')
-                //                                         : products[index].id >=
-                //                                                     0901 &&
-                //                                                 products[index].id <=
-                //                                                     0999
-                //                                             ? const Text(
-                //                                                 'پلزنت')
-                //                                             : products[index].id >=
-                //                                                         1001 &&
-                //                                                     products[index].id <=
-                //                                                         1099
-                //                                                 ? const Text(
-                //                                                     'ادلیو')
-                //                                                 : products[index].id >=
-                //                                                             1101 &&
-                //                                                         products[index].id <=
-                //                                                             1199
-                //                                                     ? const Text(
-                //                                                         'فارمالاین')
-                //                                                     : products[index].id >= 1201 &&
-                //                                                             products[index].id <= 1299
-                //                                                         ? const Text('جوجو')
-                //                                                         : products[index].id >= 1301 && products[index].id <= 1399
-                //                                                             ? const Text('رینکن')
-                //                                                             : products[index].id >= 1401 && products[index].id <= 1499
-                //                                                                 ? const Text('بتیس')
-                //                                                                 : const Text('بدون نام برند'),
-                //       ),
-                //     ),
-                //   ),
-                // );
               },
             ),
           ),
