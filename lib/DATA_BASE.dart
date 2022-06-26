@@ -67,6 +67,12 @@ List<Brands> brandData = [
     image: "images/brands/milito.png",
   ),
   Brands(
+    id: 4,
+    name: "راکوتن",
+    latinName: "Racuten",
+    image: "images/brands/racuten.png",
+  ),
+  Brands(
     id: 5,
     name: "لاکوئینتا",
     latinName: "La Quinta",
@@ -101,12 +107,6 @@ List<Brands> brandData = [
     name: "ادلیو",
     latinName: "Adelio",
     image: "images/brands/adelio.png",
-  ),
-  Brands(
-    id: 4,
-    name: "راکوتن",
-    latinName: "Racuten",
-    image: "images/brands/racuten.png",
   ),
   Brands(
     id: 11,
