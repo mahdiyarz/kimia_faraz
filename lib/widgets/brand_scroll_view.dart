@@ -21,6 +21,8 @@ class BrandScrollView extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          backgroundColor:
+              Theme.of(context).colorScheme.primary.withOpacity(.8),
           pinned: true,
           snap: true,
           floating: true,
@@ -29,18 +31,43 @@ class BrandScrollView extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(brandName),
-                Text(brandLatin),
+                Text(
+                  brandName,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.black54,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 1),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  brandLatin,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    color: Colors.black54,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 1),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             centerTitle: true,
             background: Container(
               decoration: BoxDecoration(
-                gradient: const RadialGradient(colors: [
+                gradient: LinearGradient(colors: [
                   Colors.white10,
-                  Color.fromARGB(255, 120, 151, 171),
-                ]),
-                // color: Theme.of(context).colorScheme.secondary.withOpacity(.3),
+                  const Color.fromARGB(255, 120, 151, 171).withOpacity(.7),
+                ], begin: Alignment.bottomRight),
                 image: DecorationImage(image: AssetImage(brandImage)),
               ),
             ),
@@ -57,8 +84,13 @@ class BrandScrollView extends StatelessWidget {
                         child: PhysicalModel(
                           color: Colors.white,
                           elevation: 5,
-                          shadowColor: Color(0xff040039).withOpacity(.2),
-                          borderRadius: BorderRadius.circular(20),
+                          shadowColor: const Color(0xff040039).withOpacity(.2),
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(20),
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(20),
+                          ),
                           child: InkWell(
                             onTap: () {
                               Navigator.push(
@@ -100,14 +132,30 @@ class BrandScrollView extends StatelessWidget {
                                   ),
                                 ),
                                 Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(productList[index].name),
-                                      const SizedBox(height: 5),
-                                      Text(productList[index].latinName),
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 8),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        FittedBox(
+                                          child: Text(
+                                            productList[index].name,
+                                            style:
+                                                const TextStyle(fontSize: 16),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 5),
+                                        FittedBox(
+                                          child: Text(
+                                            productList[index].latinName,
+                                            style: const TextStyle(
+                                                color: Colors.black45),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -127,8 +175,13 @@ class BrandScrollView extends StatelessWidget {
                       child: PhysicalModel(
                         color: Colors.white,
                         elevation: 5,
-                        shadowColor: Color(0xff040039).withOpacity(.2),
-                        borderRadius: BorderRadius.circular(20),
+                        shadowColor: const Color(0xff040039).withOpacity(.2),
+                        borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(8),
+                          bottomRight: Radius.circular(20),
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(20),
+                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -150,14 +203,14 @@ class BrandScrollView extends StatelessWidget {
                                 color: Colors.black38,
                               ),
                             ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('محصولی برای نمایش موجود نیست'),
-                                  const SizedBox(height: 5),
-                                  Text(''),
-                                ],
+                            const Expanded(
+                              child: Text(
+                                'محصولی برای نمایش موجود نیست',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black38),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                           ],
