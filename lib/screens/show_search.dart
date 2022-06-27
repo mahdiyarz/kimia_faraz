@@ -12,6 +12,14 @@ class ShowSearch extends StatefulWidget {
 
 class _ShowSearchState extends State<ShowSearch> {
   List<Products> products = List.from(productsData);
+  // Map<int, String> brands = {
+  //   1: 'درمالیفت',
+  //   2: '',
+  //   3: '',
+  //   4:'',
+
+  // };
+  List<Brands> brands = List.from(brandData);
 
   void updateList(String value) {
     setState(() {
@@ -158,6 +166,8 @@ class _ShowSearchState extends State<ShowSearch> {
               padding: EdgeInsets.only(bottom: _width / 5),
               itemCount: products.length,
               itemBuilder: (context, index) {
+                final productBrand = brands.firstWhere(
+                    (element) => element.id == products[index].brandId);
                 return Container(
                   margin: const EdgeInsets.fromLTRB(15, 5, 15, 0),
                   child: PhysicalModel(
@@ -186,148 +196,36 @@ class _ShowSearchState extends State<ShowSearch> {
                                   .withOpacity(.3),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: products[index].id >= 0101 &&
-                                    products[index].id <= 0199
-                                ? const Text(
-                                    'درمالیفت',
-                                    style: TextStyle(
-                                      color: Colors.black54,
-                                    ),
-                                  )
-                                : products[index].id >= 0201 &&
-                                        products[index].id <= 0299
-                                    ? const Text(
-                                        'استم سل',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      )
-                                    : products[index].id >= 0301 &&
-                                            products[index].id <= 0399
-                                        ? const Text(
-                                            'میلیتو',
-                                            style: TextStyle(
-                                              color: Colors.black54,
-                                            ),
-                                          )
-                                        : products[index].id >= 0401 &&
-                                                products[index].id <= 0499
-                                            ? const Text(
-                                                'راکوتن',
-                                                style: TextStyle(
-                                                  color: Colors.black54,
-                                                ),
-                                              )
-                                            : products[index].id >= 0501 &&
-                                                    products[index].id <= 0599
-                                                ? const Text(
-                                                    'لاکوئینتا',
-                                                    style: TextStyle(
-                                                      color: Colors.black54,
-                                                    ),
-                                                  )
-                                                : products[index].id >= 0601 &&
-                                                        products[index].id <=
-                                                            0699
-                                                    ? const Text(
-                                                        'توتال درم',
-                                                        style: TextStyle(
-                                                          color: Colors.black54,
-                                                        ),
-                                                      )
-                                                    : products[index].id >= 0701 &&
-                                                            products[index].id <=
-                                                                0799
-                                                        ? const Text(
-                                                            'دلانو',
-                                                            style: TextStyle(
-                                                              color: Colors
-                                                                  .black54,
-                                                            ),
-                                                          )
-                                                        : products[index].id >=
-                                                                    0801 &&
-                                                                products[index]
-                                                                        .id <=
-                                                                    0899
-                                                            ? const Text(
-                                                                'بایوریچ',
-                                                                style:
-                                                                    TextStyle(
-                                                                  color: Colors
-                                                                      .black54,
-                                                                ),
-                                                              )
-                                                            : products[index].id >=
-                                                                        0901 &&
-                                                                    products[index]
-                                                                            .id <=
-                                                                        0999
-                                                                ? const Text(
-                                                                    'پلزنت',
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .black54,
-                                                                    ),
-                                                                  )
-                                                                : products[index].id >=
-                                                                            1001 &&
-                                                                        products[index].id <=
-                                                                            1099
-                                                                    ? const Text(
-                                                                        'ادلیو',
-                                                                        style:
-                                                                            TextStyle(
-                                                                          color:
-                                                                              Colors.black54,
-                                                                        ),
-                                                                      )
-                                                                    : products[index].id >= 1101 &&
-                                                                            products[index].id <= 1199
-                                                                        ? const Text(
-                                                                            'فارمالاین',
-                                                                            style:
-                                                                                TextStyle(
-                                                                              color: Colors.black54,
-                                                                            ),
-                                                                          )
-                                                                        : products[index].id >= 1201 && products[index].id <= 1299
-                                                                            ? const Text(
-                                                                                'جوجو',
-                                                                                style: TextStyle(
-                                                                                  color: Colors.black54,
-                                                                                ),
-                                                                              )
-                                                                            : products[index].id >= 1301 && products[index].id <= 1399
-                                                                                ? const Text(
-                                                                                    'رینکن',
-                                                                                    style: TextStyle(
-                                                                                      color: Colors.black54,
-                                                                                    ),
-                                                                                  )
-                                                                                : products[index].id >= 1401 && products[index].id <= 1499
-                                                                                    ? const Text(
-                                                                                        'بتیس',
-                                                                                        style: TextStyle(
-                                                                                          color: Colors.black54,
-                                                                                        ),
-                                                                                      )
-                                                                                    : const Text(
-                                                                                        'بدون نام برند',
-                                                                                        style: TextStyle(
-                                                                                          color: Colors.black54,
-                                                                                        ),
-                                                                                      ),
+                            child: Text(
+                              productBrand.name,
+                              style: const TextStyle(
+                                color: Colors.black54,
+                              ),
+                            ),
                           ),
                           Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(products[index].name),
-                                const SizedBox(height: 5),
-                                Text(products[index].fullLatinName),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 8),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  FittedBox(
+                                    child: Text(
+                                      products[index].name,
+                                      style: const TextStyle(fontSize: 16),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 5),
+                                  FittedBox(
+                                    child: Text(
+                                      products[index].fullLatinName,
+                                      style: const TextStyle(
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
