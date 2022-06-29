@@ -19,8 +19,8 @@ class ProductPicture extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 10),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.33,
-          decoration: const BoxDecoration(
-            color: Colors.white,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.secondary.withOpacity(.4),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),

@@ -17,7 +17,7 @@ void main() {
   runApp(
     //* This is regular app without Device Preview Settings
     MaterialApp(
-      home: Directionality(
+      home: const Directionality(
         textDirection: TextDirection.rtl,
         child: RootPage(),
       ),
