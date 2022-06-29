@@ -4196,7 +4196,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/aha.png',
     method:
         'لطفا در طول درمان از شستشو با آب گرم پرهیز شود و از شوینده های مناسب با PH 4.5 و 5.5 استفاده گردد. هفته اول یک شب در میان و از هفته دوم هر شب بر روی نواحی مورد نظر استفاده گردد و در طول روز از مرطوب کننده استفاده شود.',
   ),
@@ -4279,7 +4279,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/depigmening-serum.png',
     method:
         'هر شب سرم را به پوست تمیز بمالید و با ملایمت ماساژ دهید تا جذب شود. استفاده از این سرم پیش از کرم های مورد استفاده معمول بلامانع است. در طی روز استفاده از کرم ضد آفتاب الزامی است.',
   ),
@@ -4323,7 +4323,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/anti-acne.png',
     method:
         'روزانه یک الی سه بار ابتدا سطح پوست را به کمک آب ولرم و پاک کننده ملایم تمیز و خشک نموده و سپس از این ژل به میزان کافی بر روی نواحی جوش دار مالیده و به آرامی و به کمک حرکات دورانی ماساژ دهید تا کاملا پخش شود و سپس، بعد از ۱۰ تا ۱۵ دقیقه صورت خود را با آب خنک آبکشی نمایید.',
   ),
@@ -4371,7 +4371,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/anti-wernikle.png',
     method:
         'بعد از تمیز کردن کامل پوست خود، صبح یا عصر روی صورت و گردن مالیده و به آرامی ماساژ دهید.',
   ),
@@ -4696,7 +4696,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/adelio/anti-dandruff-shampoo.png',
     method:
         'دو هفته اول هر روز و از هفته سوم یک شب در میان و در زمان بهبودی شوره ها هفته ای یکبار استفاده گردد.',
   ),
@@ -5705,7 +5705,7 @@ List<Products> productsData = [
       'بژ متوسط',
     ],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/total_derm/sun-bio-natural.png',
     method:
         'قبل از قرار گرفتن در معرض تابش نور خورشید مقدار کافی از کرم ضد آفتاب و مرطوب کننده توتال درم را به طور یکنواخت بر روی پوست بمالید و مصرف را هر ۴ ساعت یکبار تجدید فرمایید.',
   ),
@@ -5751,7 +5751,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/total_derm/whitening.png',
     method:
         'شب ها بر روی پوست تمیز به آرامی ماساژ دهید تا جذب شود. استفاده از ضد آفتاب های و کرم آبرسان توتال درم به عنوان محصولات مکمل درمان همراه با این محصول توصیه می گردد.',
   ),
@@ -5802,7 +5802,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/total_derm/vitamin-c.png',
     method:
         'صبح و عصر بر روی پوست تمیز صورت و گردن مالیده و به آرامی ماساژ دهید.',
   ),
@@ -5841,7 +5841,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/total_derm/eye.png',
     method:
         'بر روی پوست تمیز صبح و شب کرم را با حرکات ضربه ای روی پوست اطراف چشم بمالید تا جذب شود.',
   ),
@@ -5884,7 +5884,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب، مختلط و آکنه ای',
-    image: 'image',
+    image: 'assets/images/total_derm/anti-acne.png',
     method:
         'روزی دو بار صبح و عصر بر روی پوست تمیز به صورت موضعی بر محل مورد نظر مالیده و به آرامی ماساژ دهید.',
   ),
@@ -5967,7 +5967,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست نرمال، خشک و حساس',
-    image: 'image',
+    image: 'assets/images/total_derm/face-wash-dry.png',
     method: 'ژل شستشو را بر روی پوست مرطوب به آرامی مالیده و سپس آبکشی کنید.',
   ),
   Products(
@@ -6008,7 +6008,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب، آکنه ای و مختلط',
-    image: 'image',
+    image: 'assets/images/total_derm/face-wash-oily.png',
     method: 'ژل شستشو را بر روی پوست مرطوب به آرامی مالیده و سپس آبکشی کنید.',
   ),
   Products(
@@ -6058,7 +6058,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/total_derm/nail&hand.png',
     method: 'بر روی دست های خشک و تمیز در مواقع نیاز استفاده نمایید.',
   ),
   Products(
@@ -6103,7 +6103,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب',
-    image: 'image',
+    image: 'assets/images/total_derm/super-hydrat.png',
     method:
         'صبح یا شب بر روی پوست ناحیه مورد نظر ماساژ داده شود. سطحی که برای استفاده از این کرم در نظر دارید باید کاملا تمیز و خشک باشد. مداومت در استفاده شرط اصلی اثر بخشی آن خواهد بود.',
   ),
@@ -6149,7 +6149,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/total_derm/repair.png',
     method:
         'ابتدا دست ها و موضع زخم را تمیز و خشک کنید. پوشش نازکی از محصول را بر روی ناحیه مورد نظر مالیده و صبر کنید تا جذب و خشک شود، حداقل سه بار در روز تکرار کنید.',
   ),
