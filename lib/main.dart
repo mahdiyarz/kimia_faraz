@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/tab_bar_screen.dart';
+import 'screens/tab_bar_sc.dart';
 
 //! Device Preview imports
 // import 'package:flutter/foundation.dart';
@@ -19,7 +19,7 @@ void main() {
     MaterialApp(
       home: const Directionality(
         textDirection: TextDirection.rtl,
-        child: TabBarScreen(),
+        child: TabBarSc(),
       ),
       theme: ThemeData(
         // canvasColor: const Color.fromARGB(255, 101, 93, 138),

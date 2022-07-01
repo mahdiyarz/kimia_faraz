@@ -8,14 +8,14 @@ import '../screens/show_brand_category.dart';
 import '../screens/show_favorites.dart';
 import '../screens/show_search.dart';
 
-class TabBarScreen extends StatefulWidget {
-  const TabBarScreen({Key? key}) : super(key: key);
+class TabBarSc extends StatefulWidget {
+  const TabBarSc({Key? key}) : super(key: key);
 
   @override
-  State<TabBarScreen> createState() => _TabBarScreenState();
+  State<TabBarSc> createState() => _TabBarScState();
 }
 
-class _TabBarScreenState extends State<TabBarScreen> {
+class _TabBarScState extends State<TabBarSc> {
   List<Widget>? _pages;
   int currentIndex = 0;
   final List<IconData> iconList = [
