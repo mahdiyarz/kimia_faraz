@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kimia_faraz/widgets/carts_groups.dart';
 
 import '../screens/brand_details.dart';
 import '../DATA_BASE.dart';
@@ -13,44 +14,11 @@ class ShowBrandCategory extends StatefulWidget {
   State<ShowBrandCategory> createState() => _ShowBrandCategoryState();
 }
 
-class _ShowBrandCategoryState extends State<ShowBrandCategory>
-    with SingleTickerProviderStateMixin {
-  AnimationController? _controller;
-  Animation<double>? _opacityAnimation;
-  Animation<double>? _offsetAanimation;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 1),
-    );
-
-    _opacityAnimation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
-        parent: _controller as Animation<double>, curve: Curves.easeOut))
-      ..addListener(() {
-        setState(() {});
-      });
-
-    _offsetAanimation = Tween<double>(begin: -30, end: 0).animate(
-        CurvedAnimation(
-            parent: _controller as Animation<double>, curve: Curves.easeOut));
-
-    _controller!.forward();
-  }
-
-  @override
-  void dispose() {
-    _controller!.dispose();
-    super.dispose();
-  }
-
+class _ShowBrandCategoryState extends State<ShowBrandCategory> {
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
-    Color _color = Theme.of(context).colorScheme.secondary;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -87,95 +55,71 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
                   ],
                 ),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[0].image,
-                brandData[0].name,
-                const BrandDetails(brandId: 1),
-                _color,
-                brandData[1].image,
-                brandData[1].name,
-                const BrandDetails(brandId: 2),
-                _color,
-                brandData[2].image,
-                brandData[2].name,
-                const BrandDetails(brandId: 3),
+              CartsGroups(
+                imageUrlFirstCard: brandData[0].image,
+                titleFirstCard: brandData[0].name,
+                routeFirstCard: const BrandDetails(brandId: 1),
+                imageUrlSecondCard: brandData[1].image,
+                titleSecondCard: brandData[1].name,
+                routeSecondCard: const BrandDetails(brandId: 2),
+                imageUrlThirdCard: brandData[2].image,
+                titleThirdCard: brandData[2].name,
+                routeThirdCard: const BrandDetails(brandId: 3),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[3].image,
-                brandData[3].name,
-                const BrandDetails(brandId: 4),
-                _color,
-                brandData[4].image,
-                brandData[4].name,
-                const BrandDetails(brandId: 5),
-                _color,
-                brandData[5].image,
-                brandData[5].name,
-                const BrandDetails(brandId: 6),
+              CartsGroups(
+                imageUrlFirstCard: brandData[3].image,
+                titleFirstCard: brandData[3].name,
+                routeFirstCard: const BrandDetails(brandId: 4),
+                imageUrlSecondCard: brandData[4].image,
+                titleSecondCard: brandData[4].name,
+                routeSecondCard: const BrandDetails(brandId: 5),
+                imageUrlThirdCard: brandData[5].image,
+                titleThirdCard: brandData[5].name,
+                routeThirdCard: const BrandDetails(brandId: 6),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[6].image,
-                brandData[6].name,
-                const BrandDetails(brandId: 7),
-                _color,
-                brandData[7].image,
-                brandData[7].name,
-                const BrandDetails(brandId: 8),
-                _color,
-                brandData[8].image,
-                brandData[8].name,
-                const BrandDetails(brandId: 9),
+              CartsGroups(
+                imageUrlFirstCard: brandData[6].image,
+                titleFirstCard: brandData[6].name,
+                routeFirstCard: const BrandDetails(brandId: 7),
+                imageUrlSecondCard: brandData[7].image,
+                titleSecondCard: brandData[7].name,
+                routeSecondCard: const BrandDetails(brandId: 8),
+                imageUrlThirdCard: brandData[8].image,
+                titleThirdCard: brandData[8].name,
+                routeThirdCard: const BrandDetails(brandId: 9),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[9].image,
-                brandData[9].name,
-                const BrandDetails(brandId: 10),
-                _color,
-                brandData[10].image,
-                brandData[10].name,
-                const BrandDetails(brandId: 11),
-                _color,
-                brandData[11].image,
-                brandData[11].name,
-                const BrandDetails(brandId: 12),
+              CartsGroups(
+                imageUrlFirstCard: brandData[9].image,
+                titleFirstCard: brandData[9].name,
+                routeFirstCard: const BrandDetails(brandId: 10),
+                imageUrlSecondCard: brandData[10].image,
+                titleSecondCard: brandData[10].name,
+                routeSecondCard: const BrandDetails(brandId: 11),
+                imageUrlThirdCard: brandData[11].image,
+                titleThirdCard: brandData[11].name,
+                routeThirdCard: const BrandDetails(brandId: 12),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[12].image,
-                brandData[12].name,
-                const BrandDetails(brandId: 13),
-                _color,
-                brandData[13].image,
-                brandData[13].name,
-                const BrandDetails(brandId: 14),
-                _color,
-                brandData[14].image,
-                brandData[14].name,
-                const BrandDetails(brandId: 15),
+              CartsGroups(
+                imageUrlFirstCard: brandData[12].image,
+                titleFirstCard: brandData[12].name,
+                routeFirstCard: const BrandDetails(brandId: 13),
+                imageUrlSecondCard: brandData[13].image,
+                titleSecondCard: brandData[13].name,
+                routeSecondCard: const BrandDetails(brandId: 14),
+                imageUrlThirdCard: brandData[14].image,
+                titleThirdCard: brandData[14].name,
+                routeThirdCard: const BrandDetails(brandId: 15),
               ),
-              brandsCardsGroup(
-                context,
-                _color,
-                brandData[15].image,
-                brandData[15].name,
-                const BrandDetails(brandId: 16),
-                Colors.transparent,
-                '',
-                '',
-                null,
-                null,
-                '',
-                '',
-                null,
+              CartsGroups(
+                imageUrlFirstCard: brandData[15].image,
+                titleFirstCard: brandData[15].name,
+                routeFirstCard: const BrandDetails(brandId: 16),
+                imageUrlSecondCard: '',
+                titleSecondCard: '',
+                routeSecondCard: null,
+                imageUrlThirdCard: '',
+                titleThirdCard: '',
+                routeThirdCard: null,
               ),
               SizedBox(height: _width / 5),
             ],
@@ -218,138 +162,7 @@ class _ShowBrandCategoryState extends State<ShowBrandCategory>
               ],
             ),
           ),
-
-          // Blur the Status bar
-          blurTheStatusBar(context),
         ],
-      ),
-    );
-  }
-
-  Widget brandsCardsGroup(
-    BuildContext? context,
-    Color? colorFirstCard,
-    String? imageUrlFirstCard,
-    String? titleFirstCard,
-    Widget? routeFirstCard,
-    Color? colorSecondCard,
-    String? imageUrlSecondCard,
-    String? titleSecondCard,
-    Widget? routeSecondCard,
-    Color? colorThirdCard,
-    String? imageUrlThirdCard,
-    String? titleThirdCard,
-    Widget? routeThirdCard,
-  ) {
-    double _width = MediaQuery.of(context!).size.width;
-    return Padding(
-      padding: EdgeInsets.only(bottom: _width / 38),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          brandCard(colorFirstCard!, imageUrlFirstCard!, titleFirstCard!,
-              context, routeFirstCard!),
-          imageUrlSecondCard!.isNotEmpty
-              ? brandCard(colorSecondCard!, imageUrlSecondCard,
-                  titleSecondCard!, context, routeSecondCard!)
-              : SizedBox(
-                  height: _width / 2.5,
-                  width: _width / 3.3,
-                ),
-          imageUrlThirdCard!.isNotEmpty
-              ? brandCard(colorThirdCard!, imageUrlThirdCard, titleThirdCard!,
-                  context, routeThirdCard!)
-              : SizedBox(
-                  height: _width / 2.5,
-                  width: _width / 3.3,
-                ),
-        ],
-      ),
-    );
-  }
-
-  Widget brandCard(
-    Color color,
-    String image,
-    String title,
-    BuildContext context,
-    Widget route,
-  ) {
-    double _width = MediaQuery.of(context).size.width;
-    return Opacity(
-      opacity: _opacityAnimation!.value,
-      child: Transform.translate(
-        offset: Offset(0, _offsetAanimation!.value),
-        child: InkWell(
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          onTap: () {
-            HapticFeedback.lightImpact();
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return route;
-                },
-              ),
-            );
-          },
-          child: Container(
-            padding: const EdgeInsets.all(3),
-            height: _width / 2.5,
-            width: _width / 3.3,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xff040039).withOpacity(.15),
-                  blurRadius: 99,
-                ),
-              ],
-              borderRadius: const BorderRadius.all(
-                Radius.circular(15),
-              ),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: _width / 3.6,
-                  width: _width / 2,
-                  decoration: BoxDecoration(
-                      color: color.withOpacity(.3),
-                      borderRadius: BorderRadius.circular(15),
-                      gradient: RadialGradient(
-                        colors: [
-                          Colors.white10,
-                          color,
-                        ],
-                      )),
-                  child: Image.asset(
-                    image,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                FittedBox(
-                  fit: BoxFit.fill,
-                  child: Text(
-                    title,
-                    maxLines: 4,
-                    softWrap: true,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black.withOpacity(.5),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(),
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }
