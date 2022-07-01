@@ -13,9 +13,11 @@ class ActiveIngredients extends StatelessWidget {
   Widget build(BuildContext context) {
     return product.activeIngredients.isNotEmpty
         ? Container(
-            margin: const EdgeInsets.symmetric(vertical: 8),
-            padding: const EdgeInsets.symmetric(
+            margin: const EdgeInsets.symmetric(
+              vertical: 8,
               horizontal: 5,
+            ),
+            padding: const EdgeInsets.symmetric(
               vertical: 3,
             ),
             height: 85,
@@ -30,7 +32,7 @@ class ActiveIngredients extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 SizedBox(
@@ -57,6 +59,7 @@ class ActiveIngredients extends StatelessWidget {
                               : () {},
                           child: Center(
                             child: Card(
+                              color: Theme.of(context).colorScheme.primary,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
                               elevation: 5,
@@ -85,8 +88,8 @@ class ActiveIngredients extends StatelessWidget {
                                 .isNotEmpty
                             ? Icon(
                                 Icons.info_rounded,
-                                color: Theme.of(context).colorScheme.primary,
-                                size: 15,
+                                color: Theme.of(context).colorScheme.error,
+                                size: 18,
                               )
                             : const SizedBox(),
                       ],
@@ -118,10 +121,10 @@ class ActiveIngredients extends StatelessWidget {
                     child: Text(
                       ingredientName,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(ctx).colorScheme.primaryContainer,
+                        color: Colors.white,
                       ),
                     ),
                   ),
