@@ -4,9 +4,9 @@ import '../DATA_BASE.dart';
 import '../models/product_model.dart';
 import '../widgets/brand_scroll_view.dart';
 
-class ProductsCatLists extends StatelessWidget {
+class ProductsTypeCategorySc extends StatelessWidget {
   final int categoryId;
-  const ProductsCatLists({
+  const ProductsTypeCategorySc({
     Key? key,
     required this.categoryId,
   }) : super(key: key);
