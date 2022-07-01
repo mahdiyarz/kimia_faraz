@@ -5,9 +5,9 @@ import '../widgets/product_picture.dart';
 import '../widgets/active_ingredients.dart';
 import '../widgets/method.dart';
 
-class ProductDetails extends StatelessWidget {
+class ProductDetailsSc extends StatelessWidget {
   final Products product;
-  const ProductDetails({
+  const ProductDetailsSc({
     Key? key,
     required this.product,
   }) : super(key: key);

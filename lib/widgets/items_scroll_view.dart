@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
-import '../screens/product_details.dart';
+import '../screens/product_details_sc.dart';
 import '../DATA_BASE.dart';
 
-class BrandScrollView extends StatelessWidget {
-  final String brandName, brandImage, brandLatin;
+class ItemsScrollView extends StatelessWidget {
+  final String itemName, itemImage, itemLatinName;
   final List<Products> productsList;
   final bool showBrands;
 
-  const BrandScrollView({
+  const ItemsScrollView({
     Key? key,
-    required this.brandName,
-    required this.brandLatin,
-    required this.brandImage,
+    required this.itemName,
+    required this.itemLatinName,
+    required this.itemImage,
     required this.productsList,
     required this.showBrands,
   }) : super(key: key);
@@ -36,7 +36,7 @@ class BrandScrollView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  brandName,
+                  itemName,
                   style: const TextStyle(
                     fontSize: 20,
                     color: Colors.black54,
@@ -50,7 +50,7 @@ class BrandScrollView extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  brandLatin,
+                  itemLatinName,
                   style: const TextStyle(
                     fontSize: 18,
                     color: Colors.black54,
@@ -72,7 +72,7 @@ class BrandScrollView extends StatelessWidget {
                   Colors.white10,
                   const Color.fromARGB(255, 120, 151, 171).withOpacity(.7),
                 ], begin: Alignment.bottomRight),
-                image: DecorationImage(image: AssetImage(brandImage)),
+                image: DecorationImage(image: AssetImage(itemImage)),
               ),
             ),
           ),
@@ -103,7 +103,7 @@ class BrandScrollView extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return ProductDetails(
+                                    return ProductDetailsSc(
                                         product: productsList[index]);
                                   },
                                 ),

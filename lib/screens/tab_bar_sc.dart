@@ -3,10 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../screens/show_products_category.dart';
-import '../screens/show_brand_category.dart';
-import '../screens/show_favorites.dart';
-import '../screens/show_search.dart';
+import 'products_type_category_sc.dart';
+import 'brand_type_category_sc.dart';
+import 'favorites_sc.dart';
+import 'search_sc.dart';
 
 class TabBarSc extends StatefulWidget {
   const TabBarSc({Key? key}) : super(key: key);
@@ -28,10 +28,10 @@ class _TabBarScState extends State<TabBarSc> {
   @override
   void initState() {
     _pages = [
-      const ShowBrandCategory(),
-      const ShowProductsCategory(),
-      const ShowFavorites(),
-      const ShowSearch(),
+      const BrandTypeCategorySc(),
+      const ProductsTypeCategorySc(),
+      const FavoritesSc(),
+      const SearchSc(),
     ];
     super.initState();
   }

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../widgets/carts_groups.dart';
 import '../widgets/setting_icon.dart';
 import '../DATA_BASE.dart';
-import 'category_products_type_sc.dart';
+import 'products_type_details_sc.dart';
 
-class ShowProductsCategory extends StatelessWidget {
-  const ShowProductsCategory({Key? key}) : super(key: key);
+class ProductsTypeCategorySc extends StatelessWidget {
+  const ProductsTypeCategorySc({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,43 +50,43 @@ class ShowProductsCategory extends StatelessWidget {
               CartsGroups(
                 imageUrlFirstCard: categoryData[0].image,
                 titleFirstCard: categoryData[0].name,
-                routeFirstCard: const ProductsTypeCategorySc(categoryId: 1),
+                routeFirstCard: const ProductsTypeDetailsSc(categoryId: 1),
                 imageUrlSecondCard: categoryData[1].image,
                 titleSecondCard: categoryData[1].name,
-                routeSecondCard: const ProductsTypeCategorySc(categoryId: 2),
+                routeSecondCard: const ProductsTypeDetailsSc(categoryId: 2),
                 imageUrlThirdCard: categoryData[2].image,
                 titleThirdCard: categoryData[2].name,
-                routeThirdCard: const ProductsTypeCategorySc(categoryId: 3),
+                routeThirdCard: const ProductsTypeDetailsSc(categoryId: 3),
               ),
               CartsGroups(
                 imageUrlFirstCard: categoryData[3].image,
                 titleFirstCard: categoryData[3].name,
-                routeFirstCard: const ProductsTypeCategorySc(categoryId: 4),
+                routeFirstCard: const ProductsTypeDetailsSc(categoryId: 4),
                 imageUrlSecondCard: categoryData[4].image,
                 titleSecondCard: categoryData[4].name,
-                routeSecondCard: const ProductsTypeCategorySc(categoryId: 5),
+                routeSecondCard: const ProductsTypeDetailsSc(categoryId: 5),
                 imageUrlThirdCard: categoryData[5].image,
                 titleThirdCard: categoryData[5].name,
-                routeThirdCard: const ProductsTypeCategorySc(categoryId: 6),
+                routeThirdCard: const ProductsTypeDetailsSc(categoryId: 6),
               ),
               CartsGroups(
                 imageUrlFirstCard: categoryData[6].image,
                 titleFirstCard: categoryData[6].name,
-                routeFirstCard: const ProductsTypeCategorySc(categoryId: 7),
+                routeFirstCard: const ProductsTypeDetailsSc(categoryId: 7),
                 imageUrlSecondCard: categoryData[7].image,
                 titleSecondCard: categoryData[7].name,
-                routeSecondCard: const ProductsTypeCategorySc(categoryId: 8),
+                routeSecondCard: const ProductsTypeDetailsSc(categoryId: 8),
                 imageUrlThirdCard: categoryData[8].image,
                 titleThirdCard: categoryData[8].name,
-                routeThirdCard: const ProductsTypeCategorySc(categoryId: 9),
+                routeThirdCard: const ProductsTypeDetailsSc(categoryId: 9),
               ),
               CartsGroups(
                 imageUrlFirstCard: categoryData[9].image,
                 titleFirstCard: categoryData[9].name,
-                routeFirstCard: const ProductsTypeCategorySc(categoryId: 10),
+                routeFirstCard: const ProductsTypeDetailsSc(categoryId: 10),
                 imageUrlSecondCard: categoryData[10].image,
                 titleSecondCard: categoryData[10].name,
-                routeSecondCard: const ProductsTypeCategorySc(categoryId: 11),
+                routeSecondCard: const ProductsTypeDetailsSc(categoryId: 11),
                 imageUrlThirdCard: '',
                 titleThirdCard: '',
                 routeThirdCard: null,

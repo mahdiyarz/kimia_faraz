@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../DATA_BASE.dart';
 import '../models/product_model.dart';
-import '../widgets/brand_scroll_view.dart';
+import '../widgets/items_scroll_view.dart';
 
-class ProductsTypeCategorySc extends StatelessWidget {
+class ProductsTypeDetailsSc extends StatelessWidget {
   final int categoryId;
-  const ProductsTypeCategorySc({
+  const ProductsTypeDetailsSc({
     Key? key,
     required this.categoryId,
   }) : super(key: key);
@@ -20,10 +20,10 @@ class ProductsTypeCategorySc extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      body: BrandScrollView(
-        brandName: category.name,
-        brandLatin: category.latinName,
-        brandImage: category.image,
+      body: ItemsScrollView(
+        itemName: category.name,
+        itemLatinName: category.latinName,
+        itemImage: category.image,
         productsList: products,
         showBrands: true,
       ),
