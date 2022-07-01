@@ -23,7 +23,8 @@ class BrandDetails extends StatelessWidget {
         brandName: brands.name,
         brandLatin: brands.latinName,
         brandImage: brands.image,
-        productList: products,
+        productsList: products,
+        showBrands: false,
       ),
     );
   }

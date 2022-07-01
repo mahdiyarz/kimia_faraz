@@ -2,21 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
 import '../screens/product_details.dart';
+import '../DATA_BASE.dart';
 
 class BrandScrollView extends StatelessWidget {
   final String brandName, brandImage, brandLatin;
-  final List<Products> productList;
+  final List<Products> productsList;
+  final bool showBrands;
 
   const BrandScrollView({
     Key? key,
     required this.brandName,
     required this.brandLatin,
     required this.brandImage,
-    required this.productList,
+    required this.productsList,
+    required this.showBrands,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final List<Brands> brandsList = brandData;
     final _width = MediaQuery.of(context).size.width;
     return CustomScrollView(
       slivers: [
@@ -74,9 +78,11 @@ class BrandScrollView extends StatelessWidget {
           ),
         ),
         SliverList(
-          delegate: productList.isNotEmpty
+          delegate: productsList.isNotEmpty
               ? SliverChildBuilderDelegate(
                   (context, int index) {
+                    final productBrand = brandsList.firstWhere(
+                        (element) => element.id == productsList[index].brandId);
                     return Directionality(
                       textDirection: TextDirection.rtl,
                       child: Container(
@@ -98,7 +104,7 @@ class BrandScrollView extends StatelessWidget {
                                 MaterialPageRoute(
                                   builder: (context) {
                                     return ProductDetails(
-                                        product: productList[index]);
+                                        product: productsList[index]);
                                   },
                                 ),
                               );
@@ -119,10 +125,10 @@ class BrandScrollView extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Container(
-                                    child: productList[index]
+                                    child: productsList[index]
                                             .image
                                             .contains('.png')
-                                        ? Image.asset(productList[index].image)
+                                        ? Image.asset(productsList[index].image)
                                         : const Icon(
                                             Icons
                                                 .photo_size_select_actual_outlined,
@@ -141,18 +147,47 @@ class BrandScrollView extends StatelessWidget {
                                       children: [
                                         FittedBox(
                                           child: Text(
-                                            productList[index].name,
+                                            productsList[index].name,
                                             style:
                                                 const TextStyle(fontSize: 16),
                                           ),
                                         ),
                                         const SizedBox(height: 5),
-                                        FittedBox(
-                                          child: Text(
-                                            productList[index].latinName,
-                                            style: const TextStyle(
-                                                color: Colors.black45),
-                                          ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            FittedBox(
+                                              child: Text(
+                                                productsList[index].latinName,
+                                                style: const TextStyle(
+                                                    color: Colors.black45),
+                                              ),
+                                            ),
+                                            showBrands == false
+                                                ? const SizedBox()
+                                                : Container(
+                                                    width: 50,
+                                                    height: 20,
+                                                    padding: const EdgeInsets
+                                                            .symmetric(
+                                                        horizontal: 5),
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.black12,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5),
+                                                    ),
+                                                    child: FittedBox(
+                                                      child: Text(
+                                                        productBrand.name,
+                                                        style: const TextStyle(
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                    ),
+                                                  )
+                                          ],
                                         ),
                                       ],
                                     ),
@@ -165,7 +200,7 @@ class BrandScrollView extends StatelessWidget {
                       ),
                     );
                   },
-                  childCount: productList.length,
+                  childCount: productsList.length,
                 )
               : SliverChildBuilderDelegate(
                   (context, index) => Directionality(

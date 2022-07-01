@@ -18,12 +18,14 @@ class ProductsCatLists extends StatelessWidget {
     final List<Products> products = productsData
         .where((element) => element.categoryId == categoryId)
         .toList();
+
     return Scaffold(
       body: BrandScrollView(
         brandName: category.name,
         brandLatin: category.latinName,
         brandImage: category.image,
-        productList: products,
+        productsList: products,
+        showBrands: true,
       ),
     );
   }
