@@ -8,14 +8,14 @@ import '../screens/show_brand_category.dart';
 import '../screens/show_favorites.dart';
 import '../screens/show_search.dart';
 
-class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
+class TabBarScreen extends StatefulWidget {
+  const TabBarScreen({Key? key}) : super(key: key);
 
   @override
-  State<RootPage> createState() => _RootPageState();
+  State<TabBarScreen> createState() => _TabBarScreenState();
 }
 
-class _RootPageState extends State<RootPage> {
+class _TabBarScreenState extends State<TabBarScreen> {
   List<Widget>? _pages;
   int currentIndex = 0;
   final List<IconData> iconList = [
@@ -29,9 +29,9 @@ class _RootPageState extends State<RootPage> {
   void initState() {
     _pages = [
       const ShowBrandCategory(),
-      ShowProductsCategory(),
-      ShowFavorites(),
-      ShowSearch(),
+      const ShowProductsCategory(),
+      const ShowFavorites(),
+      const ShowSearch(),
     ];
     super.initState();
   }
