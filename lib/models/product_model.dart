@@ -35,10 +35,12 @@ class Products {
 
 class Category {
   int id;
-  String name;
+  String name, latinName, image;
 
   Category({
     required this.id,
     required this.name,
+    required this.latinName,
+    required this.image,
   });
 }

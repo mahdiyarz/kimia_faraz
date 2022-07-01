@@ -4,46 +4,68 @@ List<Category> categoryData = [
   Category(
     id: 1,
     name: 'کرم',
+    latinName: 'Cream',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 2,
     name: 'شامپو',
+    latinName: 'Shampoo',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 3,
     name: 'ژل',
+    latinName: 'Gel',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 4,
     name: 'سرم',
+    latinName: 'Serum',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 5,
     name: 'فوم',
+    latinName: 'Foam',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 6,
     name: 'پن',
+    latinName: 'Pan',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 7,
     name: 'لوسیون',
+    latinName: 'Lotion',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 8,
     name: 'روغن',
+    latinName: 'Oil',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 9,
     name: 'ماسک',
+    latinName: 'Mask',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 10,
     name: 'تونر و میسلار',
+    latinName: 'Toner & Micellar',
+    image: 'assets/images/adelio/aha.png',
   ),
   Category(
     id: 11,
     name: 'بالم',
+    latinName: 'Balm',
+    image: 'assets/images/adelio/aha.png',
   ),
 ];
 
