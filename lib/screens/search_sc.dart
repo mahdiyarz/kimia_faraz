@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:flutter/services.dart';
 import 'package:kimia_faraz/screens/product_details_sc.dart';
 
@@ -275,129 +276,158 @@ class _SearchScState extends State<SearchSc> {
           //       )
           //     :
           products.isEmpty
-              ? Container(
-                  margin: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 5,
-                  ),
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  alignment: Alignment.center,
-                  width: _width,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.error,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Icon(
-                        Icons.search_off,
-                        color: Colors.white.withOpacity(.8),
-                        size: 30,
+              ? Column(
+                  children: [
+                    Lottie.asset('assets/lottie/search-not-found.json'),
+                    Text(
+                      'محصول مورد نظر یافت نشد!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(.2),
+                        fontSize: 16,
                       ),
-                      Text(
-                        'محصول مورد نظر یافت نشد!',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white.withOpacity(.8),
-                          fontSize: 16,
-                        ),
+                    ),
+                    Text(
+                      ' لطفا دوباره تلاش کنید.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(.2),
+                        fontSize: 16,
                       ),
-                      Text(
-                        ' لطفا دوباره تلاش کنید.',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white.withOpacity(.8),
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 )
+              // Container(
+              //     margin: const EdgeInsets.symmetric(
+              //       horizontal: 10,
+              //       vertical: 5,
+              //     ),
+              //     padding: const EdgeInsets.symmetric(vertical: 15),
+              //     alignment: Alignment.center,
+              //     width: _width,
+              //     decoration: BoxDecoration(
+              //       color: Theme.of(context).colorScheme.error,
+              //       borderRadius: BorderRadius.circular(15),
+              //     ),
+              //     child: Column(
+              //       crossAxisAlignment: CrossAxisAlignment.stretch,
+              //       children: [
+              //         Icon(
+              //           Icons.search_off,
+              //           color: Colors.white.withOpacity(.8),
+              //           size: 30,
+              //         ),
+              //         Text(
+              //           'محصول مورد نظر یافت نشد!',
+              //           textAlign: TextAlign.center,
+              //           style: TextStyle(
+              //             fontWeight: FontWeight.bold,
+              //             color: Colors.white.withOpacity(.8),
+              //             fontSize: 16,
+              //           ),
+              //         ),
+              //         Text(
+              //           ' لطفا دوباره تلاش کنید.',
+              //           textAlign: TextAlign.center,
+              //           style: TextStyle(
+              //             fontWeight: FontWeight.bold,
+              //             color: Colors.white.withOpacity(.8),
+              //             fontSize: 16,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   )
               : const SizedBox(),
           Expanded(
-            child: ListView.builder(
-              padding: EdgeInsets.only(bottom: _width / 5),
-              itemCount: products.length,
-              itemBuilder: (context, index) {
-                final productBrand = brands.firstWhere(
-                    (element) => element.id == products[index].brandId);
-                return Container(
-                  margin: const EdgeInsets.fromLTRB(15, 5, 15, 0),
-                  child: PhysicalModel(
-                    color: Colors.white,
-                    elevation: 5,
-                    shadowColor: const Color(0xff040039).withOpacity(.2),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(20),
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(20),
-                    ),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) => ProductDetailsSc(
-                                    product: products[index]))));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.all(3),
-                            alignment: Alignment.center,
-                            height: _width * .15,
-                            width: _width * .15,
-                            decoration: BoxDecoration(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondary
-                                  .withOpacity(.3),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              productBrand.name,
-                              style: const TextStyle(
-                                color: Colors.black54,
-                              ),
-                            ),
+            child: _controller.text.isEmpty
+                ? Center(
+                    child: Lottie.asset('assets/lottie/search-icon.json'),
+                  )
+                : ListView.builder(
+                    padding: EdgeInsets.only(bottom: _width / 5),
+                    itemCount: products.length,
+                    itemBuilder: (context, index) {
+                      final productBrand = brands.firstWhere(
+                          (element) => element.id == products[index].brandId);
+                      return Container(
+                        margin: const EdgeInsets.fromLTRB(15, 5, 15, 0),
+                        child: PhysicalModel(
+                          color: Colors.white,
+                          elevation: 5,
+                          shadowColor: const Color(0xff040039).withOpacity(.2),
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(20),
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(20),
                           ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 8),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FittedBox(
-                                    child: Text(
-                                      products[index].name,
-                                      style: const TextStyle(fontSize: 16),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => ProductDetailsSc(
+                                          product: products[index]))));
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.all(3),
+                                  alignment: Alignment.center,
+                                  height: _width * .15,
+                                  width: _width * .15,
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .secondary
+                                        .withOpacity(.3),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Text(
+                                    productBrand.name,
+                                    style: const TextStyle(
+                                      color: Colors.black54,
                                     ),
                                   ),
-                                  const SizedBox(height: 5),
-                                  FittedBox(
-                                    child: Text(
-                                      products[index].fullLatinName,
-                                      style: const TextStyle(
-                                          color: Colors.black45),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 8),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        FittedBox(
+                                          child: Text(
+                                            products[index].name,
+                                            style:
+                                                const TextStyle(fontSize: 16),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 5),
+                                        FittedBox(
+                                          child: Text(
+                                            products[index].fullLatinName,
+                                            style: const TextStyle(
+                                                color: Colors.black45),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                    ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
           ),
         ],
       ),
