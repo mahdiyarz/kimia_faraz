@@ -1,8 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:flutter/services.dart';
+
 import 'package:kimia_faraz/screens/product_details_sc.dart';
 
 import '../models/product_model.dart';
@@ -276,28 +274,35 @@ class _SearchScState extends State<SearchSc> {
           //       )
           //     :
           products.isEmpty
-              ? Column(
-                  children: [
-                    Lottie.asset('assets/lottie/search-not-found.json'),
-                    Text(
-                      'محصول مورد نظر یافت نشد!',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black.withOpacity(.2),
-                        fontSize: 16,
-                      ),
+              ? SizedBox(
+                  height: _width,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Icon(Icons.warning_rounded,
+                            color: Theme.of(context).colorScheme.error,
+                            size: _width / 2),
+                        Text(
+                          'محصول مورد نظر یافت نشد!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black.withOpacity(.4),
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          ' لطفا دوباره تلاش کنید.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black.withOpacity(.4),
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      ' لطفا دوباره تلاش کنید.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black.withOpacity(.2),
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
+                  ),
                 )
               // Container(
               //     margin: const EdgeInsets.symmetric(
