@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kimia_faraz/widgets/search_items.dart';
 import 'package:lottie/lottie.dart';
 
-import '../screens/product_details_sc.dart';
+import '../widgets/search_items.dart';
 import '../models/product_model.dart';
 import '../DATA_BASE.dart';
 
