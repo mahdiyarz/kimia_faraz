@@ -14,7 +14,7 @@ class SkinColor extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Padding(
         padding: const EdgeInsets.only(
-          top: 55,
+          top: 30,
           right: 20,
         ),
         child: Column(

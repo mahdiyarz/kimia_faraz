@@ -12,7 +12,7 @@ class SkinType extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 30,
+        top: 5,
         right: 20,
       ),
       child: Text(
