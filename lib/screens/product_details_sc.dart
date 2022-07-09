@@ -103,22 +103,41 @@ class ProductDetailsSc extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 3),
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          elevation: 8,
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          mini: true,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+      // floatingActionButton: Column(
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.symmetric(vertical: 3),
+      //       child: FloatingActionButton(
+      //         onPressed: () {
+      //           Navigator.of(context).pop();
+      //         },
+      //         child: const Icon(
+      //           Icons.arrow_back,
+      //           color: Colors.white,
+      //         ),
+      //         elevation: 8,
+      //         backgroundColor: Theme.of(context).colorScheme.primary,
+      //         mini: true,
+      //       ),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.symmetric(vertical: 3),
+      //       child: FloatingActionButton(
+      //         onPressed: () {
+      //           Navigator.of(context).pop();
+      //         },
+      //         child: const Icon(
+      //           Icons.arrow_back,
+      //           color: Colors.white,
+      //         ),
+      //         elevation: 8,
+      //         backgroundColor: Theme.of(context).colorScheme.primary,
+      //         mini: true,
+      //       ),
+      //     ),
+      //   ],
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }
