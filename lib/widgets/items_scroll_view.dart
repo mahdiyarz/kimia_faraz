@@ -126,9 +126,10 @@ class ItemsScrollView extends StatelessWidget {
                                   ),
                                   child: Container(
                                     child: productsList[index]
-                                            .image
+                                            .image!
                                             .contains('.png')
-                                        ? Image.asset(productsList[index].image)
+                                        ? Image.asset(
+                                            productsList[index].image!)
                                         : const Icon(
                                             Icons
                                                 .photo_size_select_actual_outlined,

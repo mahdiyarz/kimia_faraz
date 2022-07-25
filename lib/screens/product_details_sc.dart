@@ -55,7 +55,7 @@ class ProductDetailsSc extends StatelessWidget {
                       ),
                     ),
                     // Descriptions are here
-                    product.description.isNotEmpty
+                    product.description!.isNotEmpty
                         ? Directionality(
                             textDirection: TextDirection.rtl,
                             child: Container(
@@ -75,7 +75,7 @@ class ProductDetailsSc extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  ...product.description
+                                  ...product.description!
                                       .map((e) => Text(
                                             e,
                                             style: const TextStyle(

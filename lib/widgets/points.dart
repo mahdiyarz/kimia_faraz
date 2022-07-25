@@ -13,7 +13,7 @@ class Points extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: product.points.length,
+      itemCount: product.points!.length,
       itemBuilder: (context, index) => Directionality(
         textDirection: TextDirection.rtl,
         child: Padding(
@@ -32,7 +32,7 @@ class Points extends StatelessWidget {
               ),
               Flexible(
                 child: Text(
-                  product.points[index],
+                  product.points![index],
                   textAlign: TextAlign.justify,
                   style: const TextStyle(
                     fontSize: 16,

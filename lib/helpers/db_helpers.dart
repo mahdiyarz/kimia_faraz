@@ -8,7 +8,7 @@ class DBHelper {
       pathFile.join(dbPath, 'tpoost.db'),
       onCreate: (db, version) {
         return db.execute(
-            "CREATE TABLE product(productId TEXT PRIMARY KEY, productFav INTEGER)");
+            "CREATE TABLE product(id TEXT PRIMARY KEY,name STRING ,latinName STRING ,fullLatinName STRING ,catId INTEGER,brandId INTEGER, isFav INTEGER)");
       },
       version: 1,
     );

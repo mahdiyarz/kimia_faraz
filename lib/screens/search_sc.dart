@@ -26,14 +26,14 @@ class _SearchScState extends State<SearchSc> {
                 element.fullLatinName
                     .toLowerCase()
                     .contains(value.toLowerCase()) ||
-                element.activeIngredients
+                element.activeIngredients!
                     .where((element) => element['ingredientName']!
                         .toLowerCase()
                         .contains(value.toLowerCase()))
                     .toString()
                     .toLowerCase()
                     .contains(value) ||
-                element.activeIngredients
+                element.activeIngredients!
                     .where((element) => element['ingredientInfo']!
                         .toLowerCase()
                         .contains(value.toLowerCase()))

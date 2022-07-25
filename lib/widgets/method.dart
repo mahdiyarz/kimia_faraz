@@ -10,7 +10,7 @@ class Method extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return product.method.isNotEmpty
+    return product.method!.isNotEmpty
         ? Column(
             children: [
               Text(
@@ -23,7 +23,7 @@ class Method extends StatelessWidget {
                 ),
               ),
               Text(
-                product.method,
+                product.method!,
                 textAlign: TextAlign.justify,
                 textDirection: TextDirection.rtl,
                 style: const TextStyle(

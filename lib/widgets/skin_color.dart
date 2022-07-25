@@ -19,7 +19,7 @@ class SkinColor extends StatelessWidget {
         ),
         child: Column(
           children: [
-            ...product.color
+            ...product.color!
                 .map((e) => Row(
                       children: [
                         Container(

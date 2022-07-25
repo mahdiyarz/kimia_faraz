@@ -27,8 +27,8 @@ class ProductPicture extends StatelessWidget {
               bottomRight: Radius.circular(20),
             ),
           ),
-          child: product.image.contains('.png')
-              ? Image.asset(product.image)
+          child: product.image!.contains('.png')
+              ? Image.asset(product.image!)
               : Center(
                   child: Icon(
                     Icons.add_photo_alternate_outlined,
@@ -37,10 +37,10 @@ class ProductPicture extends StatelessWidget {
                   ),
                 ),
         ),
-        product.skinType.isNotEmpty
+        product.skinType!.isNotEmpty
             ? SkinType(product: product)
             : const SizedBox(),
-        product.color.isNotEmpty
+        product.color!.isNotEmpty
             ? SkinColor(product: product)
             : const SizedBox(),
         Positioned(

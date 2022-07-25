@@ -12,9 +12,11 @@ class Brands {
 
 class Products {
   int id, categoryId, brandId;
-  String name, method, image, latinName, skinType, fullLatinName;
-  List<String> points, description, color;
-  List<Map<String, String>> activeIngredients;
+  String name, fullLatinName, latinName;
+  String? method, image, skinType;
+  List<String>? points, description, color;
+  List<Map<String, String>>? activeIngredients;
+  bool? isFav;
 
   Products({
     required this.id,
@@ -23,13 +25,14 @@ class Products {
     required this.fullLatinName,
     required this.categoryId,
     required this.brandId,
-    required this.description,
-    required this.points,
-    required this.activeIngredients,
-    required this.image,
-    required this.method,
-    required this.color,
-    required this.skinType,
+    this.description,
+    this.points,
+    this.activeIngredients,
+    this.image,
+    this.method,
+    this.color,
+    this.skinType,
+    this.isFav,
   });
 }
 

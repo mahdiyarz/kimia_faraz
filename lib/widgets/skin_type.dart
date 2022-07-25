@@ -16,7 +16,7 @@ class SkinType extends StatelessWidget {
         right: 20,
       ),
       child: Text(
-        product.skinType,
+        product.skinType!,
         textAlign: TextAlign.right,
         style: TextStyle(
           color: Theme.of(context).canvasColor,

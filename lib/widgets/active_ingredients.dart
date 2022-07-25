@@ -11,7 +11,7 @@ class ActiveIngredients extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return product.activeIngredients.isNotEmpty
+    return product.activeIngredients!.isNotEmpty
         ? Container(
             margin: const EdgeInsets.symmetric(
               vertical: 8,
@@ -38,7 +38,7 @@ class ActiveIngredients extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   child: ListView.separated(
-                    itemCount: product.activeIngredients.length,
+                    itemCount: product.activeIngredients!.length,
                     scrollDirection: Axis.horizontal,
                     separatorBuilder: (context, index) =>
                         const SizedBox(width: 1),
@@ -46,14 +46,14 @@ class ActiveIngredients extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: product
-                                  .activeIngredients[index]['ingredientInfo']!
+                                  .activeIngredients![index]['ingredientInfo']!
                                   .isNotEmpty
                               ? () {
                                   return _showModalBottomSheet(
                                       context,
-                                      product.activeIngredients[index]
+                                      product.activeIngredients![index]
                                           ['ingredientName'] as String,
-                                      product.activeIngredients[index]
+                                      product.activeIngredients![index]
                                           ['ingredientInfo'] as String);
                                 }
                               : () {},
@@ -69,7 +69,7 @@ class ActiveIngredients extends StatelessWidget {
                                   padding: const EdgeInsets.all(5.0),
                                   child: Center(
                                     child: Text(
-                                      product.activeIngredients[index]
+                                      product.activeIngredients![index]
                                           ['ingredientName'] as String,
                                       textDirection: TextDirection.rtl,
                                       textAlign: TextAlign.center,
@@ -84,7 +84,7 @@ class ActiveIngredients extends StatelessWidget {
                             ),
                           ),
                         ),
-                        product.activeIngredients[index]['ingredientInfo']!
+                        product.activeIngredients![index]['ingredientInfo']!
                                 .isNotEmpty
                             ? Icon(
                                 Icons.info_rounded,
