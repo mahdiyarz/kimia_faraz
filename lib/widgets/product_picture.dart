@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/favorite_provider.dart';
 import '../models/product_model.dart';
 import '../screens/tab_bar_sc.dart';
 import 'skin_type.dart';
 import 'skin_color.dart';
 
-class ProductPicture extends StatelessWidget {
+class ProductPicture extends StatefulWidget {
   final Products product;
   const ProductPicture({
     Key? key,
@@ -12,7 +15,15 @@ class ProductPicture extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<ProductPicture> createState() => _ProductPictureState();
+}
+
+class _ProductPictureState extends State<ProductPicture> {
+  @override
   Widget build(BuildContext context) {
+    final _toggleFav = Provider.of<FavoriteProvider>(context)
+        .isProductFavorite(widget.product.id);
+
     return Stack(
       alignment: Alignment.topRight,
       children: [
@@ -27,8 +38,8 @@ class ProductPicture extends StatelessWidget {
               bottomRight: Radius.circular(20),
             ),
           ),
-          child: product.image!.contains('.png')
-              ? Image.asset(product.image!)
+          child: widget.product.image!.contains('.png')
+              ? Image.asset(widget.product.image!)
               : Center(
                   child: Icon(
                     Icons.add_photo_alternate_outlined,
@@ -37,78 +48,84 @@ class ProductPicture extends StatelessWidget {
                   ),
                 ),
         ),
-        product.skinType!.isNotEmpty
-            ? SkinType(product: product)
+        widget.product.skinType!.isNotEmpty
+            ? SkinType(product: widget.product)
             : const SizedBox(),
-        product.color!.isNotEmpty
-            ? SkinColor(product: product)
+        widget.product.color!.isNotEmpty
+            ? SkinColor(product: widget.product)
             : const SizedBox(),
         Positioned(
             top: 5,
             left: 15,
             child: Column(
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      ),
+                Container(
+                  alignment: Alignment.center,
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
                     ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Directionality(
-                              textDirection: TextDirection.rtl,
-                              child: TabBarSc())),
-                    );
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 5),
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.home,
-                        color: Colors.white,
-                      ),
-                    ),
+                Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(top: 5),
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Directionality(
+                                textDirection: TextDirection.rtl,
+                                child: TabBarSc())),
+                      );
+                    },
+                    icon: const Icon(Icons.home, color: Colors.white),
                   ),
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 5),
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.favorite_border,
-                        color: Colors.white,
-                      ),
-                    ),
+                Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(top: 5),
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        _toggleFav != _toggleFav;
+                      });
+                      Provider.of<FavoriteProvider>(context, listen: false)
+                          .toggleFavorite(
+                        widget.product.id,
+                        widget.product.name,
+                        widget.product.latinName,
+                        widget.product.fullLatinName,
+                        widget.product.categoryId,
+                        widget.product.brandId,
+                      );
+                    },
+                    icon: _toggleFav == false
+                        ? const Icon(Icons.favorite_border, color: Colors.white)
+                        : const Icon(Icons.favorite, color: Colors.red),
                   ),
                 ),
               ],
@@ -122,7 +139,7 @@ class ProductPicture extends StatelessWidget {
             child: FittedBox(
               fit: BoxFit.fill,
               child: Text(
-                product.fullLatinName,
+                widget.product.fullLatinName,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Theme.of(context).canvasColor,

@@ -4,11 +4,25 @@ import 'package:path/path.dart' as pathFile;
 class DBHelper {
   static Future<sqflite.Database> database() async {
     final dbPath = await sqflite.getDatabasesPath();
-    return sqflite.openDatabase(
+    const idType = 'INTEGER PRIMARY KEY';
+    const textType = 'TEXT NOT NULL';
+    const intType = 'INTEGER NOT NULL';
+    const boolType = 'BOOLEAN NOT NULL';
+
+    return await sqflite.openDatabase(
       pathFile.join(dbPath, 'tpoost.db'),
       onCreate: (db, version) {
-        return db.execute(
-            "CREATE TABLE product(id TEXT PRIMARY KEY,name STRING ,latinName STRING ,fullLatinName STRING ,catId INTEGER,brandId INTEGER, isFav INTEGER)");
+        return db.execute('''
+          CREATE TABLE favorite_products (
+            id $idType,
+            name $textType,
+            latinName $textType,
+            fullLatinName $textType,
+            catId $intType,
+            brandId $intType,
+            isFav $intType
+          )
+        ''');
       },
       version: 1,
     );
@@ -26,5 +40,10 @@ class DBHelper {
   static Future<List<Map<String, dynamic>>> getData(String table) async {
     final db = await DBHelper.database();
     return db.query(table);
+  }
+
+  static Future<int> delete(String table, int id) async {
+    final db = await DBHelper.database();
+    return db.delete(table, where: "id = ?", whereArgs: [id]);
   }
 }
