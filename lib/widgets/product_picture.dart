@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../widgets/fav_button.dart';
+import '../widgets/home_button.dart';
+import '../widgets/back_button.dart';
 import '../providers/favorite_provider.dart';
 import '../models/product_model.dart';
-import '../screens/tab_bar_sc.dart';
 import 'skin_type.dart';
 import 'skin_color.dart';
 
@@ -59,74 +61,11 @@ class _ProductPictureState extends State<ProductPicture> {
             left: 15,
             child: Column(
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.only(top: 5),
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: TabBarSc())),
-                      );
-                    },
-                    icon: const Icon(Icons.home, color: Colors.white),
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.only(top: 5),
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                  child: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _toggleFav != _toggleFav;
-                      });
-                      Provider.of<FavoriteProvider>(context, listen: false)
-                          .toggleFavorite(
-                        widget.product.id,
-                        widget.product.name,
-                        widget.product.latinName,
-                        widget.product.fullLatinName,
-                        widget.product.categoryId,
-                        widget.product.brandId,
-                      );
-                    },
-                    icon: _toggleFav == false
-                        ? const Icon(Icons.favorite_border, color: Colors.white)
-                        : const Icon(Icons.favorite, color: Colors.red),
-                  ),
+                const CustomBackButton(),
+                const HomeButton(),
+                FavoriteButton(
+                  isPressed: _toggleFav,
+                  product: widget.product,
                 ),
               ],
             )),
