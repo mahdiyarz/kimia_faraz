@@ -2,12 +2,19 @@ import 'package:flutter/foundation.dart';
 import 'package:kimia_faraz/helpers/db_helpers.dart';
 
 import '../models/product_model.dart';
+import '../DATA_BASE.dart';
 
 class FavoriteProvider with ChangeNotifier {
   List<Products> _items = [];
 
   List<Products> get items {
     return [..._items];
+  }
+
+  final List<Brands> _brandItems = brandData;
+
+  List<Brands> get brandItems {
+    return [..._brandItems];
   }
 
   Future<void> toggleFavorite(
@@ -92,6 +99,7 @@ class FavoriteProvider with ChangeNotifier {
           ),
         )
         .toList();
+
     notifyListeners();
   }
 
