@@ -83,29 +83,32 @@ class _SettingIconState extends State<SettingIcon>
                   }
                   _bool = false;
                 },
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(99)),
-                  child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaY: 5, sigmaX: 5),
-                    child: Container(
-                      height: _width / 8.5,
-                      width: _width / 8.5,
-                      decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(.05),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                        child: Icon(
-                          _bool == true
-                              ? Icons.settings
-                              : Icons.arrow_forward_rounded,
-                          size: _width / 17,
-                          color: Colors.black.withOpacity(.6),
+                child: _bool
+                    ? ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(99)),
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaY: 5, sigmaX: 5),
+                          child: Container(
+                            height: _width / 8.5,
+                            width: _width / 8.5,
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(.05),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Icon(
+                                _bool == true
+                                    ? Icons.settings
+                                    : Icons.arrow_forward_rounded,
+                                size: _width / 17,
+                                color: Colors.black.withOpacity(.6),
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                ),
+                      )
+                    : const SizedBox(),
               ),
             ],
           ),
@@ -137,73 +140,102 @@ class _SettingIconState extends State<SettingIcon>
                     .withOpacity(_animation2!.value),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Stack(
                 children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.black12,
-                    radius: 35,
-                    child: Icon(
-                      Icons.person_outline_rounded,
-                      size: 30,
-                      color: Colors.white,
+                  Positioned(
+                    left: 10,
+                    top: 10,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 20,
+                      child: IconButton(
+                          onPressed: () {
+                            _controller!.reverse();
+
+                            _bool = false;
+                          },
+                          icon: Icon(
+                            Icons.arrow_forward,
+                            color: Theme.of(context).colorScheme.primary,
+                          )),
                     ),
                   ),
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      MyTile(Icons.settings_outlined, 'تنظیمات پنل کاربری', () {
-                        HapticFeedback.lightImpact();
-                        Fluttertoast.showToast(
-                          msg: 'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
-                        );
-                      }),
-                      MyTile(Icons.store_mall_directory_rounded,
-                          'لیست پایگاه های ما', () {
-                        HapticFeedback.lightImpact();
-                        Fluttertoast.showToast(
-                          msg: 'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
-                        );
-                      }),
-                      MyTile(Icons.storage_rounded, 'خدمات انبارداری', () {
-                        HapticFeedback.lightImpact();
-                        Fluttertoast.showToast(
-                          msg: 'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
-                        );
-                      }),
-                      MyTile(Icons.feedback_outlined, 'انتقادات و پیشنهادات',
-                          () {
-                        HapticFeedback.lightImpact();
-                        Fluttertoast.showToast(
-                          msg: 'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
-                        );
-                      }),
-                      MyTile(Icons.info_outline_rounded, 'درباره ما', () {
-                        HapticFeedback.lightImpact();
-                        Fluttertoast.showToast(
-                          msg: 'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
-                        );
-                      }),
-                    ],
-                  ),
-                  const SizedBox(),
-                  Column(
-                    children: const [
-                      Text(
-                        'Designed & Developed by Mahdiyar Arbabzi',
-                        style: TextStyle(
-                          color: Colors.white54,
-                          fontSize: 10,
+                      CircleAvatar(
+                        backgroundColor: Colors.black12,
+                        radius: 35,
+                        child: Icon(
+                          Icons.person_outline_rounded,
+                          size: 30,
+                          color: Colors.white,
                         ),
                       ),
-                      Text(
-                        'pars.string@gmail.com',
-                        style: TextStyle(
-                          color: Colors.white54,
-                          fontSize: 10,
-                        ),
+                      Column(
+                        children: [
+                          MyTile(Icons.settings_outlined, 'تنظیمات پنل کاربری',
+                              () {
+                            HapticFeedback.lightImpact();
+                            Fluttertoast.showToast(
+                              msg:
+                                  'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
+                            );
+                          }),
+                          MyTile(Icons.store_mall_directory_rounded,
+                              'لیست پایگاه های ما', () {
+                            HapticFeedback.lightImpact();
+                            Fluttertoast.showToast(
+                              msg:
+                                  'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
+                            );
+                          }),
+                          MyTile(Icons.storage_rounded, 'خدمات انبارداری', () {
+                            HapticFeedback.lightImpact();
+                            Fluttertoast.showToast(
+                              msg:
+                                  'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
+                            );
+                          }),
+                          MyTile(
+                              Icons.feedback_outlined, 'انتقادات و پیشنهادات',
+                              () {
+                            HapticFeedback.lightImpact();
+                            Fluttertoast.showToast(
+                              msg:
+                                  'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
+                            );
+                          }),
+                          MyTile(Icons.info_outline_rounded, 'درباره ما', () {
+                            HapticFeedback.lightImpact();
+                            Fluttertoast.showToast(
+                              msg:
+                                  'در حال تکمیل این بخش در نسخه های بعدی هستیم.',
+                            );
+                          }),
+                        ],
+                      ),
+                      const SizedBox(),
+                      Column(
+                        children: const [
+                          Text(
+                            'Designed & Developed by Mahdiyar Arbabzi',
+                            style: TextStyle(
+                              color: Colors.white54,
+                              fontSize: 10,
+                            ),
+                          ),
+                          Text(
+                            'pars.string@gmail.com',
+                            style: TextStyle(
+                              color: Colors.white54,
+                              fontSize: 10,
+                            ),
+                          )
+                        ],
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

@@ -18,6 +18,8 @@ class FavoriteItems extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: ListView.builder(
+        physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics()),
         padding: EdgeInsets.only(bottom: _width / 5, top: _width / 5),
         itemCount: products.length,
         itemBuilder: (context, index) {
