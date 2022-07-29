@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../widgets/fav_button.dart';
 import '../widgets/home_button.dart';
 import '../widgets/back_button.dart';
-import '../providers/favorite_provider.dart';
+import '../providers/tpoost_provider.dart';
 import '../models/product_model.dart';
 import 'skin_type.dart';
 import 'skin_color.dart';
@@ -23,7 +23,7 @@ class ProductPicture extends StatefulWidget {
 class _ProductPictureState extends State<ProductPicture> {
   @override
   Widget build(BuildContext context) {
-    final _toggleFav = Provider.of<FavoriteProvider>(context)
+    final _toggleFav = Provider.of<TPoostProvider>(context)
         .isProductFavorite(widget.product.id);
 
     return Stack(

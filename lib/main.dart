@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/tab_bar_sc.dart';
-import 'providers/favorite_provider.dart';
+import 'providers/tpoost_provider.dart';
 
 //! Device Preview imports
 // import 'package:flutter/foundation.dart';
@@ -19,7 +19,7 @@ void main() {
   runApp(
     //* This is regular app without Device Preview Settings
     ChangeNotifierProvider(
-      create: (context) => FavoriteProvider(),
+      create: (context) => TPoostProvider(),
       child: MaterialApp(
         home: const Directionality(
           textDirection: TextDirection.rtl,

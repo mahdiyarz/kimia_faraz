@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kimia_faraz/widgets/favorite_items.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/favorite_provider.dart';
-import '../widgets/search_items.dart';
+import '../providers/tpoost_provider.dart';
 import '../widgets/setting_icon.dart';
 
 class FavoritesSc extends StatelessWidget {
@@ -13,7 +12,7 @@ class FavoritesSc extends StatelessWidget {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     final brands =
-        Provider.of<FavoriteProvider>(context, listen: false).brandItems;
+        Provider.of<TPoostProvider>(context, listen: false).brandItems;
     return SafeArea(
       child: Stack(
         children: [
@@ -47,20 +46,21 @@ class FavoritesSc extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: _width / 15),
             child: FutureBuilder(
-              future: Provider.of<FavoriteProvider>(context, listen: false)
+              future: Provider.of<TPoostProvider>(context, listen: false)
                   .fetchFavoriteData(),
               builder: (ctx, snapShots) =>
                   snapShots.connectionState == ConnectionState.waiting
                       ? const Center(child: CircularProgressIndicator())
-                      : Consumer<FavoriteProvider>(
+                      : Consumer<TPoostProvider>(
                           child: Center(
                             child: Text('هنوز محصولی رو اضافه نکردید!'),
                           ),
                           builder: (ctx, myFavs, myChild) =>
-                              myFavs.items.length <= 0
+                              myFavs.favoriteItems.length <= 0
                                   ? myChild as Widget
                                   : FavoriteItems(
-                                      products: myFavs.items, brands: brands),
+                                      products: myFavs.favoriteItems,
+                                      brands: brands),
                         ),
             ),
           ),

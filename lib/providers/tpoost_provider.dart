@@ -4,17 +4,11 @@ import 'package:kimia_faraz/helpers/db_helpers.dart';
 import '../models/product_model.dart';
 import '../DATA_BASE.dart';
 
-class FavoriteProvider with ChangeNotifier {
-  List<Products> _items = [];
+class TPoostProvider with ChangeNotifier {
+  List<Products> _favoriteItems = [];
 
-  List<Products> get items {
-    return [..._items];
-  }
-
-  final List<Brands> _brandItems = brandData;
-
-  List<Brands> get brandItems {
-    return [..._brandItems];
+  List<Products> get favoriteItems {
+    return [..._favoriteItems];
   }
 
   Future<void> toggleFavorite(
@@ -63,12 +57,12 @@ class FavoriteProvider with ChangeNotifier {
           allData.where((element) => element.id == myFavorites.id);
 
       if (duplicateCheck.isNotEmpty) {
-        _items.removeWhere((element) => element.id == myFavorites.id);
+        _favoriteItems.removeWhere((element) => element.id == myFavorites.id);
         notifyListeners();
 
         DBHelper.delete('favorite_products', myFavorites.id);
       } else {
-        _items.add(myFavorites);
+        _favoriteItems.add(myFavorites);
         notifyListeners();
 
         DBHelper.insert('favorite_products', {
@@ -86,7 +80,7 @@ class FavoriteProvider with ChangeNotifier {
 
   Future<void> fetchFavoriteData() async {
     final db = await DBHelper.getData('favorite_products');
-    _items = db
+    _favoriteItems = db
         .map(
           (e) => Products(
             id: e['id'],
@@ -104,10 +98,22 @@ class FavoriteProvider with ChangeNotifier {
   }
 
   Products findById(int id) {
-    return _items.firstWhere((element) => element.id == id);
+    return _favoriteItems.firstWhere((element) => element.id == id);
   }
 
   bool isProductFavorite(int id) {
-    return _items.any((element) => element.id == id);
+    return _favoriteItems.any((element) => element.id == id);
+  }
+
+  final List<Brands> _brandItems = brandData;
+
+  List<Brands> get brandItems {
+    return [..._brandItems];
+  }
+
+  final List<Products> _productItems = productsData;
+
+  List<Products> get productItems {
+    return [..._productItems];
   }
 }

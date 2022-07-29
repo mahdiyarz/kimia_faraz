@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/product_model.dart';
-import '../providers/favorite_provider.dart';
+import '../providers/tpoost_provider.dart';
 
 class FavoriteButton extends StatefulWidget {
   bool isPressed;
@@ -36,7 +36,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
           setState(() {
             widget.isPressed = !widget.isPressed;
           });
-          Provider.of<FavoriteProvider>(context, listen: false).toggleFavorite(
+          Provider.of<TPoostProvider>(context, listen: false).toggleFavorite(
             widget.product.id,
             widget.product.name,
             widget.product.latinName,
