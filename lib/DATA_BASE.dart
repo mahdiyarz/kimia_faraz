@@ -128,7 +128,7 @@ List<Brands> brandData = [
     id: 10,
     name: "ادلیو",
     latinName: "Adelio",
-    image: "images/brands/adelio.png",
+    image: "assets/images/adelio/sun-natural.png",
   ),
   Brands(
     id: 11,
@@ -4196,7 +4196,7 @@ List<Products> productsData = [
       'بژ طبیعی',
     ],
     skinType: 'مناسب پوست چرب',
-    image: 'image',
+    image: 'assets/images/adelio/sun-natural.png',
     method:
         'نیم ساعت قبل از قرار گرفتن در معرض اشعه آفتاب، روی پوست تمیز ماساژ داده و هر چهار ساعت یکبار آن را تجدید کنید.',
   ),
@@ -4239,7 +4239,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/aha.png',
     method:
         'لطفا در طول درمان از شستشو با آب گرم پرهیز شود و از شوینده های مناسب با PH 4.5 و 5.5 استفاده گردد. هفته اول یک شب در میان و از هفته دوم هر شب بر روی نواحی مورد نظر استفاده گردد و در طول روز از مرطوب کننده استفاده شود.',
   ),
@@ -4259,7 +4259,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب پوست چرب',
-    image: 'image',
+    image: 'assets/images/adelio/hydrating-oily.png',
     method: 'صبح و شب با ماساژ ملایم بر روی پوست تمیز صورت و گردن استفاده شود.',
   ),
   Products(
@@ -4279,7 +4279,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب پوست خشک و حساس',
-    image: 'image',
+    image: 'assets/images/adelio/hydrante-dry.png',
     method: 'صبح و شب با ماساژ ملایم بر روی پوست تمیز صورت و گردن استفاده شود.',
   ),
   Products(
@@ -4324,7 +4324,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/whitening-cream.png',
     method:
         'شب ها روی پوست تمیز ماساژ داده و در طول روز به طور مستمر حتما از ضد آفتاب مناسب پوست استفاده شود.',
   ),
@@ -4371,7 +4371,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/repairing.png',
     method:
         'روزی چند بار مقداری از این کرم را بر روی بافت اسکار مالیده و سپس به خوبی ماساژ دهید تا کرم به طور کامل جذب گردد.',
   ),
@@ -4393,7 +4393,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'assets/images/adelio/anti-wernikle.png',
+    image: 'assets/images/adelio/anti-wrinkle.png',
     method:
         'بعد از تمیز کردن کامل پوست خود، صبح یا عصر روی صورت و گردن مالیده و به آرامی ماساژ دهید.',
   ),
@@ -4415,7 +4415,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/lifting.png',
     method:
         'صبح و شب روی پوست تمیز صورت و گردن خود ماساژ دهید تا کاملا جذب پوست شود.',
   ),
@@ -4439,7 +4439,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/hand-cream.png',
     method:
         'هر روز بعد از شستشوی دست ها از این کرم آبرسان (مرطوب کننده) استفاده شود.',
   ),
@@ -4463,7 +4463,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/eye.png',
     method: 'صبح و شب با حرکات ضربه ای ملایم به دور چشم مالیده شود.',
   ),
   Products(
@@ -4486,7 +4486,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/vitamin-c.png',
     method: 'یک شب در میان بر روی پوست تمیز استفاده گردد.',
   ),
   Products(
@@ -4506,7 +4506,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/adelio/night-cream.png',
     method:
         'هر شب قبل از خواب مقدار کافی از کرم را روی پوست تمیز صورت و گردن استفاده نمایید.',
   ),
@@ -4529,7 +4529,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب پوست خشک و نرمال',
-    image: 'image',
+    image: 'assets/images/adelio/face-wash-dry.png',
     method:
         'صورت را با کمی آب مرطوب نمایید، مقداری از ژل را با حرکات دورانی روی صورت ماساژ دهید، سپس با آب ولرم شستشو دهید.',
   ),
@@ -4550,7 +4550,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب پوست چرب',
-    image: 'image',
+    image: 'assets/images/adelio/face-wash-oily.png',
     method:
         'صورت را با کمی آب مرطوب نمایید، مقداری از ژل را با حرکات دورانی روی صورت ماساژ دهید، سپس با آب ولرم شستشو دهید.',
   ),
@@ -4572,7 +4572,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/adelio/intimate-gel.png',
     method:
         'مقداری از ژل را روی ناحیه مورد نظر ریخته و پس از یک دقیقه آبکشی نمایید. از این ژل می توان روزانه به تعداد یک یا دو بار استفاده کرد.',
   ),
@@ -4718,7 +4718,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'assets/images/adelio/anti-dandruff-shampoo.png',
+    image: 'assets/images/adelio/anti-dandruff.png',
     method:
         'دو هفته اول هر روز و از هفته سوم یک شب در میان و در زمان بهبودی شوره ها هفته ای یکبار استفاده گردد.',
   ),
@@ -4768,7 +4768,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب موی چرب',
-    image: 'image',
+    image: 'assets/images/adelio/greasy-shampoo.png',
     method:
         'حداقل سه الی چهار مرتبه در طول هفته استفاده شود. مقدار مناسب از شامپو را بر روی پوست سر ریخته و سه تا پنج دقیقه ماساژ دهید.',
   ),
@@ -4815,7 +4815,7 @@ List<Products> productsData = [
     activeIngredients: [],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/adelio/dialy-shampoo.png',
     method:
         'حداقل سه الی چهار مرتبه در طول هفته استفاده شود. مقدار مناسب از شامپو را بر روی پوست سر ریخته و سه تا پنج دقیقه ماساژ دهید.',
   ),
