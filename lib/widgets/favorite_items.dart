@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimia_faraz/models/product_model.dart';
+import 'package:kimia_faraz/providers/tpoost_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../screens/product_details_sc.dart';
 
@@ -23,6 +25,8 @@ class FavoriteItems extends StatelessWidget {
         padding: EdgeInsets.only(bottom: _width / 5, top: _width / 5),
         itemCount: products.length,
         itemBuilder: (context, index) {
+          final _product =
+              Provider.of<TPoostProvider>(context).findById(products[index].id);
           final productBrand = brands
               .firstWhere((element) => element.id == products[index].brandId);
           return Directionality(
@@ -45,7 +49,7 @@ class FavoriteItems extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return ProductDetailsSc(product: products[index]);
+                          return ProductDetailsSc(product: _product);
                         },
                       ),
                     );

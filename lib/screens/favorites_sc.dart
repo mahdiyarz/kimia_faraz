@@ -55,13 +55,13 @@ class FavoritesSc extends StatelessWidget {
                           child: Center(
                             child: Text('هنوز محصولی رو اضافه نکردید!'),
                           ),
-                          builder: (ctx, myFavs, myChild) =>
-                              myFavs.favoriteItems.length <= 0
-                                  ? myChild as Widget
-                                  : FavoriteItems(
-                                      products: myFavs.favoriteItems,
-                                      brands: brands),
-                        ),
+                          builder: (ctx, myFavs, myChild) {
+                            return myFavs.favoriteItems.length <= 0
+                                ? myChild as Widget
+                                : FavoriteItems(
+                                    products: myFavs.favoriteItems,
+                                    brands: brands);
+                          }),
             ),
           ),
           Positioned(left: 0, top: _width / -14.2, child: const SettingIcon()),

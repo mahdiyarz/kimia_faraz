@@ -98,7 +98,7 @@ class TPoostProvider with ChangeNotifier {
   }
 
   Products findById(int id) {
-    return _favoriteItems.firstWhere((element) => element.id == id);
+    return productItems.firstWhere((element) => element.id == id);
   }
 
   bool isProductFavorite(int id) {
