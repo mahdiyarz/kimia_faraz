@@ -110,13 +110,13 @@ List<Brands> brandData = [
     id: 7,
     name: "دلانو",
     latinName: "Delano",
-    image: "images/brands/delano.png",
+    image: "assets/images/delano/sebumcontrol.png",
   ),
   Brands(
     id: 8,
     name: "بایوریچ",
     latinName: "Bio Reach",
-    image: "images/brands/bio_reach.png",
+    image: "assets/images/bio_reach/keratin-shampoo.png",
   ),
   Brands(
     id: 9,
@@ -152,7 +152,7 @@ List<Brands> brandData = [
     id: 14,
     name: "بتیس",
     latinName: "Betis",
-    image: "images/brands/betis.png",
+    image: "assets/images/betis/hand&nail.png",
   ),
   Brands(
     id: 15,
@@ -214,7 +214,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images/dermalift/melaliftCream.png',
+    image: 'images',
     skinType: "مناسب انواع پوست",
     method:
         'روزانه دو بار کرم ملالیفت را بر روی مناطق تیره پوست مالیده و به خوبی ماساژ دهید. در طی روز حتما از کرم ضد آفتاب با SPF مناسب استفاده نمائید.',
@@ -271,7 +271,7 @@ List<Products> productsData = [
       'بژ روشن',
       'بژ متوسط',
     ],
-    image: 'images/dermalift/seboliftCream.png',
+    image: 'images',
     skinType: 'مناسب پوست های چرب و دارای جوش',
     method:
         'پس از شستشوی مناسب پوست، روزانه دو بار کرم سبولیفت را روی مناطقی از پوست که دچار آکنه و کومدون گردیده اند، مالیده و به خوبی ماساژ دهید.',
@@ -330,7 +330,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images/dermalift/vitaliftCream.png',
+    image: 'images',
     skinType: 'مناسب انواع پوست',
     method:
         'ترجیحا شبها کرم دور چشم ویتالیفت را از سمت داخل به خارج پلک تحتانی با حرکات ضربه ای ملایم بمالید. مراقب باشید کرم داخل چشم نگردد. کرم دور چشم را حداقل به مدت شش ماه استفاده نمائید.',
@@ -373,7 +373,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images/dermalift/rozaliftCream',
+    image: 'images',
     skinType: 'مناسب پوست های خشک و حساس',
     method:
         'کرم رزالیفت را روزانه ۲ تا ۳ بار بر روی مناطقی از پوست که دچار قرمزی یا التهاب گردیده اند، بمالید. مصرف کرم را تا رفع کامل قرمزی و التهاب ادامه دهید.',
@@ -418,7 +418,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images/dermalift/fermaliftCream.png',
+    image: 'images',
     skinType: 'مناسب انواع پوست',
     method:
         'پس از شستشوی مناسب پوست، کرم فرمالیفت را صبحها و شبها بر روی پوست صورت و گردن مالیده و به خوبی ماساژ دهید.',
@@ -475,7 +475,7 @@ List<Products> productsData = [
       'غیر رنگی',
       'بژ متوسط',
     ],
-    image: 'images/dermalift/hydraliftCream.png',
+    image: 'images',
     skinType: 'مناسب پوست های خشک و خیلی خشک',
     method:
         'کرم مرطوب کننده هیدرالیفت را روزها و شبها به دفعات مورد نیاز به روی پوست صورت و گردن مالیده و به ملایمت ماساژ دهید تا جذب گردد. از این کرم می توانید زیر آرایش نیز استفاده کنید.',
@@ -2584,7 +2584,7 @@ List<Products> productsData = [
       'بژ طبیعی',
     ],
     skinType: 'مناسب پوست های چرب و دارای جوش',
-    image: 'image',
+    image: 'assets/images/delano/sun-oily-natural.png',
     method:
         'نیم ساعت قبل از قرار گرفتن در معرض اشعه خورشید، روی پوست تمیز ماساژ داده و هر سه تا چهار ساعت یکبار آن را تجدید کنید.',
   ),
@@ -2608,7 +2608,7 @@ List<Products> productsData = [
       'بژ طبیعی',
     ],
     skinType: 'مناسب پوست های خشک و نرمال',
-    image: 'image',
+    image: 'assets/images/delano/sun-normal-light.png',
     method:
         'نیم ساعت قبل از قرار گرفتن در معرض اشعه خورشید، روی پوست تمیز ماساژ داده و هر سه تا چهار ساعت یکبار آن را تجدید کنید.',
   ),
@@ -2635,7 +2635,7 @@ List<Products> productsData = [
       'بژ طبیعی',
     ],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/sun-bio-natural.png',
     method:
         'نیم ساعت قبل از قرار گرفتن در معرض اشعه خورشید، روی پوست تمیز ماساژ داده و هر سه تا چهار ساعت یکبار آن را تجدید کنید.',
   ),
@@ -2685,7 +2685,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/whitening.png',
     method:
         'شب ها روی پوست تمیز ماساژ داده و در طول روز به طور مستمر حتما از ضد آفتاب مناسب پوست استفاده شود.',
   ),
@@ -2730,7 +2730,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های خشک و نرمال',
-    image: 'image',
+    image: 'assets/images/delano/day.png',
     method:
         'هر روز صبح بر روی پوست تمیز استفاده شود. با حرکت دایره ای به آرامی به سمت بالا ماساژ دهید تا کاملا جذب پوست شود.',
   ),
@@ -2781,7 +2781,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/aha.png',
     method:
         'شب ها مقدار کمی از کرم را روی پوست تمیز ماساژ دهید و در طول روز حتما از ضد آفتاب مناسب پوست استفاده نمایید.',
   ),
@@ -2834,7 +2834,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/vitamin-c.png',
     method:
         'سرم ویتامین سی را بر روی پوست تمیز ماساژ دهید تا به طور کامل جذب پوست شود.',
   ),
@@ -2881,7 +2881,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های خشک و نرمال',
-    image: 'image',
+    image: 'assets/images/delano/face-wash-dry.png',
     method:
         'صورت را با کمی آب مرطوب نمائید. مقداری از ژل را با حرکات دورانی روی صورت ماساژ دهید. از تماس با چشم ها و مخاط خودداری گردد. بعد با آب ولرم شستشو دهید.',
   ),
@@ -2926,7 +2926,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های چرب و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/delano/face-wash-oily.png',
     method:
         'صورت را با کمی آب مرطوب نمائید. مقداری از ژل را با حرکات دورانی روی صورت ماساژ دهید. از تماس با چشم ها و مخاط خودداری گردد. سپس با آب ولرم شستشو دهید.',
   ),
@@ -2970,7 +2970,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/eye.png',
     method:
         'صبح و شب بر روی پوست تمیز دور چشم به صورت دورانی با ضربات ملایم از داخل به خارج ماساژ دهید.',
   ),
@@ -3018,7 +3018,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/makeup-remover.png',
     method:
         'یک پد پنبه ای را مقدار مناسب از محصول آغشته کرده و هرگونه آلودگی، چربی و مواد آرایشی را از پوست خود پاک نمایید.',
   ),
@@ -3057,7 +3057,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/repair.png',
     method:
         'میزان مناسب از ژل ترمیم کننده را بر روی نواحی آسیب دیده پوست ماساژ دهید و حداقل سه بار در روز استفاده نمایید.',
   ),
@@ -3108,7 +3108,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های چرب و جوش دار',
-    image: 'image',
+    image: 'assets/images/delano/sebumcontrol.png',
     method:
         'صبح و عصر بر روی پوست تمیز به آرامی ماساژ دهید تا کاملا جذب پوست شود.',
   ),
@@ -3162,7 +3162,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های چرب، مختلط و جوش دار',
-    image: 'image',
+    image: 'assets/images/delano/anti-acne.png',
     method:
         'جهت استفاده صبح و شب روی موضع به آرامی ماساژ دهید و برای تکمیل درمان روزها از کرم ضد آفتاب فاقد چربی استفاده شود.',
   ),
@@ -3194,7 +3194,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/anti-wrinkle.png',
     method:
         'بعد از تمیز کردن کامل پوست خود، صبح یا عصر روی صورت و گردن مالیده و به آرامی ماساژ دهید.',
   ),
@@ -3234,7 +3234,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/24h.png',
     method:
         'هر روز صبح بعد از تمیز کردن پوست صورت و گردن خود، از کرم انرژی زا ۲۴ ساعته استفاده نمایید.',
   ),
@@ -3269,7 +3269,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/lifting.png',
     method:
         'کرم سفت کننده و لیفتینگ را صبح و شب روی پوست تمیز صورت و گردن خود ماساژ دهید تا کاملا جذب پوست شود.',
   ),
@@ -3301,7 +3301,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/delano/night.png',
     method:
         'شب ها روی پوست تمیز به حالت دورانی ماساژ دهید تا کاملا جذب پوست شود.',
   ),
@@ -3389,7 +3389,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های چرب و مختلط',
-    image: 'image',
+    image: 'assets/images/delano/hydrating.png',
     method: 'در مواقع لزوم با توجه به خشکی پوست استفاده نمایید.',
   ),
   Products(
@@ -3453,7 +3453,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای چرب',
-    image: 'image',
+    image: 'assets/images/delano/',
     method:
         'مقدار مناسبی از شامپو را به مدت دو تا سه دقیقه بر روی موهای مرطوب ماساژ دهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
   ),
@@ -3498,7 +3498,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای خشک',
-    image: 'image',
+    image: 'assets/images/delano/anti-hail-loss-dry.png',
     method:
         'مقدار مناسبی از شامپو را به مدت دو تا سه دقیقه بر روی موهای مرطوب ماساژ دهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
   ),
@@ -3564,7 +3564,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای چرب',
-    image: 'image',
+    image: 'assets/images/delano/anti-dandruff-oily-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را به مدت دو تا سه دقیقه بر روی موهای مرطوب ماساژ داهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
   ),
@@ -3619,7 +3619,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای نرمال و خشک',
-    image: 'image',
+    image: 'assets/images/delano/anti-dandruff-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را به مدت دو تا سه دقیقه بر روی موهای مرطوب ماساژ دهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
   ),
@@ -3655,7 +3655,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای رنگ شده و آسیب دیده',
-    image: 'image',
+    image: 'assets/images/delano/colored-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را به مدت دو تا سه دقیقه بر روی موهای مرطوب ماساژ دهید و سپس آبکشی نمایید. این عمل را مجددا تکرار کنید.',
   ),
@@ -6227,7 +6227,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/bio_reach/anti-hair-loss.png',
     method:
         'هفته ای ۲ الی ۳ مرتبه مقداری از شامپو را به موهای خیس زده و به خوبی ماساژ دهید. بعد از ۵ دقیقه موهایتان را آبکشی کنید.',
   ),
@@ -6291,7 +6291,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موی خشک و دارای شوره',
-    image: 'image',
+    image: 'assets/images/bio_reach/anti-dandruff-dry-shampoo.png',
     method:
         'هفته ای ۲ الی ۳ مرتبه روی موی خیس ماساژ دهید، ۳ دقیقه بماند و بعد آبکشی نمایید. (از تماس با چشم پرهیز شود)',
   ),
@@ -6411,7 +6411,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موی کراتین شده',
-    image: 'image',
+    image: 'assets/images/bio_reach/keratin-shampoo.png',
     method:
         'بعد از ماساژ روی موی خیس با آب شسته شود، مناسب استفاده روزانه. (از تماس با چشم پرهیز شود)',
   ),
@@ -6460,7 +6460,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب',
-    image: 'image',
+    image: 'assets/images/bio_reach/face-wash-oily.png',
     method:
         'صورت را با کمی آب مرطوب نمایید. مقدار مناسبی از ژل را با حرکات دورانی روی صورت ماساژ دهید و کاملا با آب بشویید.',
   ),
@@ -6504,7 +6504,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست دارای لک',
-    image: 'image',
+    image: 'assets/images/bio_reach/whitening-gel.png',
     method:
         'مقدار کمی از ژل را بر روی پوست مرطوب بزنید و به آرامی ماساژ دهید ،سپس با آب ولرم شستشو دهید.',
   ),

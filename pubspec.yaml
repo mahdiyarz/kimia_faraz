@@ -68,6 +68,9 @@ flutter:
     - images/brands/
     - assets/images/adelio/
     - assets/images/total_derm/
+    - assets/images/betis/
+    - assets/images/bio_reach/
+    - assets/images/delano/
     - assets/lottie/
 
   #   - images/a_dot_ham.jpeg
