@@ -70,15 +70,13 @@ class FavoriteItems extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Container(
-                          child:
-                              // products[index].image!.contains('.png')
-                              //     ? Image.asset(products[index].image!)
-                              //     :
-                              const Icon(
-                            Icons.photo_size_select_actual_outlined,
-                            size: 30,
-                            color: Colors.black38,
-                          ),
+                          child: _product.image!.contains('.png')
+                              ? Image.asset(products[index].image!)
+                              : const Icon(
+                                  Icons.photo_size_select_actual_outlined,
+                                  size: 30,
+                                  color: Colors.black38,
+                                ),
                         ),
                       ),
                       Expanded(

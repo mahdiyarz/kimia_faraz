@@ -7,7 +7,6 @@ class DBHelper {
     const idType = 'INTEGER PRIMARY KEY';
     const textType = 'TEXT NOT NULL';
     const intType = 'INTEGER NOT NULL';
-    const boolType = 'BOOLEAN NOT NULL';
 
     return await sqflite.openDatabase(
       pathFile.join(dbPath, 'tpoost.db'),
@@ -18,6 +17,7 @@ class DBHelper {
             name $textType,
             latinName $textType,
             fullLatinName $textType,
+            image $textType,
             catId $intType,
             brandId $intType,
             isFav $intType
