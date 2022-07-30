@@ -71,6 +71,10 @@ flutter:
     - assets/images/betis/
     - assets/images/bio_reach/
     - assets/images/delano/
+    - assets/images/fine/
+    - assets/images/dermalift/
+    - assets/images/la_quinta/
+    - assets/images/milito/
     - assets/lottie/
 
   #   - images/a_dot_ham.jpeg

@@ -34,7 +34,7 @@ List<Category> categoryData = [
   Category(
     id: 6,
     name: 'پن',
-    latinName: 'Pan',
+    latinName: 'Pain',
     image: 'assets/images/adelio/aha.png',
   ),
   Category(
@@ -74,7 +74,7 @@ List<Brands> brandData = [
     id: 1,
     name: "درمالیفت",
     latinName: "Dermalift",
-    image: "images/brands/dermalift.png",
+    image: "assets/images/dermalift/sebolift.png",
   ),
   Brands(
     id: 2,
@@ -86,7 +86,7 @@ List<Brands> brandData = [
     id: 3,
     name: "میلیتو",
     latinName: "Milito",
-    image: "images/brands/milito.png",
+    image: "assets/images/milito/sunscreen.png",
   ),
   Brands(
     id: 4,
@@ -98,13 +98,13 @@ List<Brands> brandData = [
     id: 5,
     name: "لاکوئینتا",
     latinName: "La Quinta",
-    image: "images/brands/la_quinta.png",
+    image: "assets/images/la_quinta/eyegel.png",
   ),
   Brands(
     id: 6,
     name: "توتال درم",
     latinName: "Total Derm",
-    image: "images/brands/total_derm.png",
+    image: "assets/images/total_derm/whitening.png",
   ),
   Brands(
     id: 7,
@@ -164,7 +164,7 @@ List<Brands> brandData = [
     id: 16,
     name: "فاین",
     latinName: "Fine",
-    image: "images/brands/fine.png",
+    image: "assets/images/fine/fine.png",
   ),
 ];
 
@@ -214,7 +214,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images',
+    image: 'assets/images/dermalift/melalift.png',
     skinType: "مناسب انواع پوست",
     method:
         'روزانه دو بار کرم ملالیفت را بر روی مناطق تیره پوست مالیده و به خوبی ماساژ دهید. در طی روز حتما از کرم ضد آفتاب با SPF مناسب استفاده نمائید.',
@@ -271,7 +271,7 @@ List<Products> productsData = [
       'بژ روشن',
       'بژ متوسط',
     ],
-    image: 'images',
+    image: 'assets/images/dermalift/sebolift.png',
     skinType: 'مناسب پوست های چرب و دارای جوش',
     method:
         'پس از شستشوی مناسب پوست، روزانه دو بار کرم سبولیفت را روی مناطقی از پوست که دچار آکنه و کومدون گردیده اند، مالیده و به خوبی ماساژ دهید.',
@@ -330,7 +330,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images',
+    image: 'assets/images/dermalift/vitalift.png',
     skinType: 'مناسب انواع پوست',
     method:
         'ترجیحا شبها کرم دور چشم ویتالیفت را از سمت داخل به خارج پلک تحتانی با حرکات ضربه ای ملایم بمالید. مراقب باشید کرم داخل چشم نگردد. کرم دور چشم را حداقل به مدت شش ماه استفاده نمائید.',
@@ -373,7 +373,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images',
+    image: 'assets/images/dermalift/rozalift.png',
     skinType: 'مناسب پوست های خشک و حساس',
     method:
         'کرم رزالیفت را روزانه ۲ تا ۳ بار بر روی مناطقی از پوست که دچار قرمزی یا التهاب گردیده اند، بمالید. مصرف کرم را تا رفع کامل قرمزی و التهاب ادامه دهید.',
@@ -418,7 +418,7 @@ List<Products> productsData = [
       },
     ],
     color: [],
-    image: 'images',
+    image: 'assets/images/dermalift/firmalift.png',
     skinType: 'مناسب انواع پوست',
     method:
         'پس از شستشوی مناسب پوست، کرم فرمالیفت را صبحها و شبها بر روی پوست صورت و گردن مالیده و به خوبی ماساژ دهید.',
@@ -475,7 +475,7 @@ List<Products> productsData = [
       'غیر رنگی',
       'بژ متوسط',
     ],
-    image: 'images',
+    image: 'assets/images/dermalift/hydralift2.png',
     skinType: 'مناسب پوست های خشک و خیلی خشک',
     method:
         'کرم مرطوب کننده هیدرالیفت را روزها و شبها به دفعات مورد نیاز به روی پوست صورت و گردن مالیده و به ملایمت ماساژ دهید تا جذب گردد. از این کرم می توانید زیر آرایش نیز استفاده کنید.',
@@ -3742,7 +3742,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/milito/antiacne.png',
     method:
         'روزانه و در طی دو نبت صبح و عصر مقداری از لوسیون آنتی آکنه را به طور مستقیم یا با استفاده از پد روی تمام نقاط مد نظر مالیده و به آرامی ماساژ دهید. از تماس لوسیون با پوست نازک اطراف چشم و سطوح مخاطی پوست حتما جلوگیری شود.',
   ),
@@ -3786,7 +3786,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب و مختلط',
-    image: 'image',
+    image: 'assets/images/milito/facewash-oily.png',
     method:
         'صورت خود را با آب مرطوب کنید، سپس مقدار کمی از ژل شستشو را کف دست ریخته و روی پوست صورت ماساژ داده و پس از چند دقیقه شستشو دهید.',
   ),
@@ -3826,7 +3826,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/rejuvanating.png',
     method:
         'دو تا سه بار در روز بر روی نقاط مورد نظر به صورت ضربه ای بمالید. برای التیام پوستهای حساس، نقاط آفتاب سوخته، لبهای ترک خورده و یا حتی جهت درمان پوستهای تحریک شده پس از اصلاح می توان از این کرم استفاده کرد.',
   ),
@@ -3869,7 +3869,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/eyecare.png',
     method:
         'پس از پاک کردن آرایش چشم هایتان روزانه دوبار صبح و شب مقدار مناسبی از کرم را روی پوست تمیز دور چشم بمالید. سپس با استفاده از نوک انگشت با حرکات ضربه ای ملایم کرم را اطراف چشم ماساژ داده تا خوب جذب شود.',
   ),
@@ -3924,7 +3924,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست خشک و اگزمایی',
-    image: 'image',
+    image: 'assets/images/milito/eczema.png',
     method:
         'روزانه دو بار، صبح و شب، مقدار کافی از فرآورده را بر روی پوست تمیز و خشک صورت و گردن مالیده و به آرامی ماساژ دهید. این محصول فاقد عطر، رنگ و پروپیلن گلیکول است. همچنین دارای بافت چرب با جذب بسیار سریع می باشد.',
   ),
@@ -3963,7 +3963,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست خشک و نرمال',
-    image: 'image',
+    image: 'assets/images/milito/facewash-dry.png',
     method:
         'صورت خود را با آب مرطوب کنید، سپس مقدار کمی از ژل شستشو را کف دست ریخته و روی پوست صورت ماساژ داده و پس از چند دقیقه شستشو دهید.',
   ),
@@ -3999,7 +3999,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/scargel.png',
     method:
         'روزانه دو تا سه بار کرم را بر روی نواحی مورد نظر ماساژ دهید. توجه شود که این کرم بر روی زخم های باز و بخیه ها استفاده نشود و از تماس این کرم با چشم و سایر بافت های مخاطی خودداری شود.',
   ),
@@ -4034,7 +4034,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست های دارای لک',
-    image: 'image',
+    image: 'assets/images/milito/lightening.png',
     method:
         'دو بار در روز استفاده شود. استفاده از ضد آفتاب همراه با کرم فراموش نشود.',
   ),
@@ -4085,7 +4085,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/cleanmilk.png',
     method:
         'صبح و شب با پنبه آغشته به شیر پاککن یا با نوک انگشت کل صورت و گردن را پاک نمایید.',
   ),
@@ -4124,7 +4124,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/hydration.png',
     method:
         'صبح ها و یا پس از محصولات درمانی دیگر می توانید از این کرم بر روی پوست خود مالیده و با ماساژ ملایم به جذب آن کمک نمایید.',
   ),
@@ -4167,7 +4167,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/milito/relife.png',
     method:
         'روزی چند بار مقدار مناسبی از کرم را روی ناحیه ای که دارای درد، ورم، خشکی یا سفتی می باشد گذاشته و به آرامی ماساژ دهید تا جذب شود.',
   ),
@@ -4987,7 +4987,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب، مختلط و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/la_quinta/moisturizing-oily.png',
     method:
         'در دو نوبت صبح و شب بر روی پوست صورت و گردن مالیده، به آرامی ماساژ داده تا کامل جذب گردد.',
   ),
@@ -5042,7 +5042,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/la_quinta/vitaminc.png',
     method: 'صبح و شب بر روی پوست تمیز ماساژ داده شود.',
   ),
   Products(
@@ -5145,7 +5145,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/la_quinta/anti-wrinkle.png',
     method:
         'روی پوست تمیز صورت و گردن با حرکت دورانی ماساژ دهید (با تمرکز بر روی خطوط).',
   ),
@@ -5206,7 +5206,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست خشک و حساس',
-    image: 'image',
+    image: 'assets/images/la_quinta/hydrating-dry.png',
     method: 'صبح و شب بر روی پوست صورت و گردن ماساژ داده شود.',
   ),
   Products(
@@ -5258,7 +5258,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/la_quinta/brightening.png',
     method:
         'صبح و شب بر روی پوست صورت، گردن و دکلته مالیده و به آرامی ماساژ دهید تا جذب شود. استفاده از ضد آفتاب ها و کرم مرطوب کننده لاکویینتا به عنوان محصولات مکمل درمان همراه با این محصول توصیه می گردد.',
   ),
@@ -5304,7 +5304,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/la_quinta/eye-cream.png',
     method:
         'کرم را صبح و شب با حرکات ضربه ای روی پوست اطراف چشم بمالید تا جذب شود.',
   ),
