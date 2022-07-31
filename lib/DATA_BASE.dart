@@ -134,7 +134,7 @@ List<Brands> brandData = [
     id: 11,
     name: "فارمالاین",
     latinName: "PharmaLine",
-    image: "images/brands/pharma_line.png",
+    image: "assets/images/pharmaline/pharmalip.png",
   ),
   Brands(
     id: 12,
@@ -5491,7 +5491,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/pharmaline/pharmalip.png',
     method:
         'کرم فارمالیپ را در دو نوبت صبح و شب بر روی لب ها مالیده و به آرامی ماساژ دهید.',
   ),
@@ -5538,7 +5538,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/pharmaline/pharmanail.png',
     method:
         'کرم فارمانیل را حداقل سه بار در طی شبانه روز بر روی ناخن و اطراف آن استفاده نمایید.',
   ),
@@ -5585,7 +5585,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست دارای جوش و آکنه',
-    image: 'image',
+    image: 'assets/images/pharmaline/pharmacne.png',
     method:
         'پس از شستشوی پوست با شوینده مناسب، ژل فارماکنه را در دو نوبت صبح و شب، بر روی مناطق چرب و جوش دار صورت و بدن مالیده و به آرامی ماساژ دهید.',
   ),
@@ -5632,7 +5632,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست دارای لک',
-    image: 'image',
+    image: 'assets/images/pharmaline/pharmawhite.png',
     method:
         'کرم ژل فارماوایت را در دو نوبت صبح و شب بر روی مناطق تیره پوست مالیده و به آرامی ماساژ دهید.',
   ),
@@ -5679,7 +5679,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست خشک و حساس',
-    image: 'image',
+    image: 'assets/images/pharmaline/pharmatopia.png',
     method:
         'کرم فارماتوپیا را حداقل سه بار در طی شبانه روز بر روی پوست های حساس و ملتهب مالیده و به آرامی ماساژ دهید.',
   ),
