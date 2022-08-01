@@ -122,7 +122,7 @@ List<Brands> brandData = [
     id: 9,
     name: "پلزنت",
     latinName: "Pleasent",
-    image: "images/brands/pleasant.png",
+    image: "assets/images/pleasent/daily-shampoo.png",
   ),
   Brands(
     id: 10,
@@ -158,7 +158,7 @@ List<Brands> brandData = [
     id: 15,
     name: "رین استایل",
     latinName: "Rain Style",
-    image: "images/brands/rs.png",
+    image: "assets/images/rain_style/rain-style.png",
   ),
   Brands(
     id: 16,
@@ -1401,7 +1401,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست نرمال و خشک',
-    image: 'image',
+    image: 'assets/images/pleasent/face-wash-dry.png',
     method:
         'روزانه یک الی دو بار برای شستشو آلودگیها و پاکسازی مواد آرایشی سطح پوست صورت استفاده نمایید.',
   ),
@@ -1450,7 +1450,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب، مختلط و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/pleasent/face-wash-oily.png',
     method:
         'روزانه یک الی دو بار برای شستشو آلودگی ها و پاکسازی مواد آرایشی سطح پوست صورت استفاده نمایید.',
   ),
@@ -1507,7 +1507,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست خشک، دهیدراته و حساس',
-    image: 'image',
+    image: 'assets/images/pleasent/hydrating-dry.png',
     method:
         'روزانه دو بار صبح و عصر بر روی پوست تمیز استفاده گردد. در مواقع ضروری به دفعات این دستورالعمل قابل استفاده می باشد.',
   ),
@@ -1548,7 +1548,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب، مختلط و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/pleasent/hydrating-oily.png',
     method:
         'روزانه دوبار صبح و عصر بر روی پوست تمیز استفاده گردد. در مواقع ضروری به دفعات این دستورالعمل قابل استفاده می باشد.',
   ),
@@ -1599,7 +1599,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/sun-invisible.png',
     method:
         'سی دقیقه قبل از قرار گرفتن در معرض آفتاب استفاده گردد. در طول روز هر سه ساعت یکبار تمدید نمائید.',
   ),
@@ -1649,7 +1649,7 @@ List<Products> productsData = [
       'بژ طبیعی',
     ],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/sun-natural.png',
     method:
         'سی دقیقه قبل از قرار گرفتن در معرض آفتاب استفاده گردد. در طول روز هر سه ساعت یکبار تمدید نمائید.',
   ),
@@ -1698,7 +1698,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/whitening.png',
     method:
         'روزانه صبح یا عصر کرم دپیگمانت را بر روی نواحی دارای لک ماساژ دهید و توصیه می شود شب ها به عنوان تکمیل درمان از سرم بوستر ویتامین C استفاده گردد.',
   ),
@@ -1743,7 +1743,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/vitamin-c.png',
     method:
         'روزانه صبح یا عصر کرم دپیگمانت را بر روی نواحی دارای لک ماساژ دهید و توصیه می شود شب ها به عنوان تکمیل درمان از سرم بوستر ویتامین C استفاده گردد.',
   ),
@@ -1794,7 +1794,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/anti-wrinkle.png',
     method: 'صبح و عصر بر روی پوست تمیز صورت و گردن به آرامی ماساژ دهید.',
   ),
   Products(
@@ -1832,7 +1832,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/lifting.png',
     method: 'صبح و عصر بر روی پوست تمیز صورت و گردن به آرامی ماساژ دهید.',
   ),
   Products(
@@ -1884,7 +1884,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/eye.png',
     method: 'روزانه صبح و عصر بر روی پوست تمیز دور چشم استفاده گردد.',
   ),
   Products(
@@ -1924,7 +1924,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/repair.png',
     method:
         'اسکار ژل را روزی دوبار بر روی پوست تمیز و خشک به صورت موضعی استفاده نمایید.',
   ),
@@ -1977,7 +1977,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/pleasent/aha.png',
     method:
         'روزانه صبح و عصر از ژل ضد جوش بر روی ضایعات آکنه و شب ها به عنوان کمک درمان از ژل لایه بردار استفاده نمایید.',
   ),
@@ -2026,7 +2026,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب پوست چرب و مستعد آکنه',
-    image: 'image',
+    image: 'assets/images/pleasent/anti-acne.png',
     method:
         'روزانه صبح و عصر از ژل ضد جوش بر روی ضایعات آکنه و شب ها به عنوان کمک درمان از ژل لایه بردار استفاده نمایید.',
   ),
@@ -2083,7 +2083,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/pleasent/lip-balm.png',
     method: 'روزانه بالم لب را در جهت درمان خشکی لب استفاده نمایید.',
   ),
   Products(
@@ -2139,7 +2139,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/hand-cream.png',
     method:
         'روزانه کرم دست پروتئین پیله ابریشم را در جهت درمان خشکی پوست دست استفاده نمایید.',
   ),
@@ -2184,7 +2184,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/pleasent/intimate-gel.png',
     method:
         'ابتدا قسمت خارجی دستگاه تناسلی را مرطوب و به مقدار کافی از ژل بهداشتی بانوان بر روی موضع مورد نظر استعمال نموده و به خوبی آبکشی نمایید.',
   ),
@@ -2225,7 +2225,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع پوست',
-    image: 'image',
+    image: 'assets/images/pleasent/body-lotion.png',
     method:
         'روزانه و پس از استحمام جهت رطوبت رسانی بدن از لوسیون مغذی استفاده نمایید.',
   ),
@@ -2291,7 +2291,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/pleasent/anti-dandruff-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),
@@ -2344,7 +2344,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موی چرب',
-    image: 'image',
+    image: 'assets/images/pleasent/greasy-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),
@@ -2410,7 +2410,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موهای آسیب دیده و کراتین',
-    image: 'image',
+    image: 'assets/images/pleasent/keratin-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),
@@ -2451,7 +2451,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب موی خشک',
-    image: 'image',
+    image: 'assets/images/pleasent/dry-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),
@@ -2504,7 +2504,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/pleasent/daily-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),
@@ -2557,7 +2557,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: 'مناسب انواع مو',
-    image: 'image',
+    image: 'assets/images/pleasent/hair-loss-shampoo.png',
     method:
         'مقدار مناسبی از شامپو را روی موها و پوست مرطوب سر ماساژ داده پس از سه تا پنج دقیقه به خوبی آبکشی نمایید.',
   ),

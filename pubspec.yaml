@@ -76,6 +76,8 @@ flutter:
     - assets/images/la_quinta/
     - assets/images/milito/
     - assets/images/pharmaline/
+    - assets/images/pleasent/
+    - assets/images/rain_style/
     - assets/lottie/
 
   #   - images/a_dot_ham.jpeg
