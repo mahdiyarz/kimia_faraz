@@ -80,7 +80,7 @@ List<Brands> brandData = [
     id: 2,
     name: "استم سل",
     latinName: "Stem Cell",
-    image: "images/brands/stemcell.png",
+    image: "assets/images/stem_cell/argan-oil.png",
   ),
   Brands(
     id: 3,
@@ -146,7 +146,7 @@ List<Brands> brandData = [
     id: 13,
     name: "رینکون",
     latinName: "Rinkon",
-    image: "images/brands/rinkon.png",
+    image: "assets/images/rinkon/eyebrow.png",
   ),
   Brands(
     id: 14,
@@ -5359,7 +5359,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/rinkon/lipbalm.png',
     method:
         'ابتدا دست های خود را با یک شوینده مناسب بشویید، سپس بالم لب را با انگشت روی لب ماساژ دهید.',
   ),
@@ -5403,7 +5403,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/rinkon/nail.png',
     method:
         'روزی دو یا سه مرتبه روی نواحی اطراف ناخن و کوتیکول ها ماساژ دهید. قبل از لاک ناخن استفاده شود.',
   ),
@@ -5442,7 +5442,7 @@ List<Products> productsData = [
     ],
     color: [],
     skinType: '',
-    image: 'image',
+    image: 'assets/images/rinkon/eyebrow.png',
     method:
         'ابتدا مژه ها و ابرو را از هر گونه مواد آرایشی پاک کرده سپس با استفاده از اپلیکاتور، مقدار کمی از محلول را در امتداد خط رویش مژه ها و ابروها به سمت بالا بکشید. برای نتیجه بخشی بهتر به مدت ۳-۱۲ هفته هر روز استفاده شود.',
   ),

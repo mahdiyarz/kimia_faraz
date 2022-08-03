@@ -78,6 +78,9 @@ flutter:
     - assets/images/pharmaline/
     - assets/images/pleasent/
     - assets/images/rain_style/
+    - assets/images/rinkon/
+    - assets/images/soskin/
+    - assets/images/stem_cell/
     - assets/lottie/
 
   #   - images/a_dot_ham.jpeg
