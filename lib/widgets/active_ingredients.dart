@@ -38,6 +38,8 @@ class ActiveIngredients extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   child: ListView.separated(
+                    physics: const BouncingScrollPhysics(
+                        parent: AlwaysScrollableScrollPhysics()),
                     itemCount: product.activeIngredients!.length,
                     scrollDirection: Axis.horizontal,
                     separatorBuilder: (context, index) =>
