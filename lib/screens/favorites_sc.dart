@@ -48,20 +48,27 @@ class FavoritesSc extends StatelessWidget {
             child: FutureBuilder(
               future: Provider.of<TPoostProvider>(context, listen: false)
                   .fetchFavoriteData(),
-              builder: (ctx, snapShots) =>
-                  snapShots.connectionState == ConnectionState.waiting
-                      ? const Center(child: CircularProgressIndicator())
-                      : Consumer<TPoostProvider>(
-                          child: Center(
-                            child: Text('هنوز محصولی رو اضافه نکردید!'),
-                          ),
-                          builder: (ctx, myFavs, myChild) {
-                            return myFavs.favoriteItems.length <= 0
-                                ? myChild as Widget
-                                : FavoriteItems(
-                                    products: myFavs.favoriteItems,
-                                    brands: brands);
-                          }),
+              builder: (ctx, snapShots) => snapShots.connectionState ==
+                      ConnectionState.waiting
+                  ? const Center(child: CircularProgressIndicator())
+                  : Consumer<TPoostProvider>(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                              width: _width,
+                              height: _width / 1.2,
+                              child: Image.asset('assets/lottie/favorite.png')),
+                          const Text(
+                              'همین الان محصول مورد علاقه خودتون رو اضافه کنید'),
+                        ],
+                      ),
+                      builder: (ctx, myFavs, myChild) {
+                        return myFavs.favoriteItems.length <= 0
+                            ? myChild as Widget
+                            : FavoriteItems(
+                                products: myFavs.favoriteItems, brands: brands);
+                      }),
             ),
           ),
           Positioned(left: 0, top: _width / -14.2, child: const SettingIcon()),
