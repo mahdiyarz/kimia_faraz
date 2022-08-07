@@ -1,10 +1,11 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:kimia_faraz/helpers/db_helpers.dart';
 
 import '../models/product_model.dart';
 import '../DATA_BASE.dart';
 
 class TPoostProvider with ChangeNotifier {
+  //* Favorite Providers
   List<Products> _favoriteItems = [];
 
   List<Products> get favoriteItems {
@@ -111,15 +112,51 @@ class TPoostProvider with ChangeNotifier {
     return _favoriteItems.any((element) => element.id == id);
   }
 
+  //* Brands Providers
   final List<Brands> _brandItems = brandData;
 
   List<Brands> get brandItems {
     return [..._brandItems];
   }
 
+  //* Products Providers
   final List<Products> _productItems = productsData;
 
   List<Products> get productItems {
     return [..._productItems];
   }
+
+//* Alert for exit from app
+  Future<bool?> showWarning(BuildContext context) async => showDialog<bool>(
+        context: context,
+        builder: (context) => Directionality(
+          textDirection: TextDirection.rtl,
+          child: AlertDialog(
+            title: const Text(
+              'آیا می خواهید از برنامه خارج شوید؟',
+              style: TextStyle(
+                color: Colors.black45,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            actions: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 5,
+                  primary: Theme.of(context).colorScheme.primary,
+                ),
+                onPressed: () => Navigator.pop(context, false),
+                child: const Text('نه هنوز'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Theme.of(context).colorScheme.primary,
+                ),
+                onPressed: () => Navigator.pop(context, true),
+                child: const Text('بله'),
+              ),
+            ],
+          ),
+        ),
+      );
 }

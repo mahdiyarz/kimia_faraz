@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kimia_faraz/providers/tpoost_provider.dart';
+import 'package:provider/provider.dart';
 
 class SettingIcon extends StatefulWidget {
   const SettingIcon({Key? key}) : super(key: key);
@@ -13,22 +15,27 @@ class SettingIcon extends StatefulWidget {
 
 class _SettingIconState extends State<SettingIcon>
     with TickerProviderStateMixin {
-  AnimationController? _controller;
-  Animation<double>? _animation1;
-  Animation<double>? _animation2;
-  Animation<double>? _animation3;
+  AnimationController? menuController;
+  Animation<double>? menuAnimation1;
+  Animation<double>? menuAnimation2;
+  Animation<double>? menuAnimation3;
+  bool menuIsOpen = true;
+  // AnimationController? _controller;
+  // Animation<double>? _animation1;
+  // Animation<double>? _animation2;
+  // Animation<double>? _animation3;
 
-  bool _bool = true;
+  // bool _bool = true;
 
   @override
   void initState() {
     super.initState();
 
-    _controller = AnimationController(
+    menuController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 600));
 
-    _animation1 = Tween<double>(begin: 0, end: 20).animate(CurvedAnimation(
-      parent: _controller as Animation<double>,
+    menuAnimation1 = Tween<double>(begin: 0, end: 20).animate(CurvedAnimation(
+      parent: menuController as Animation<double>,
       curve: Curves.easeOut,
       reverseCurve: Curves.easeIn,
     ))
@@ -37,16 +44,16 @@ class _SettingIconState extends State<SettingIcon>
       })
       ..addStatusListener((status) {
         if (status == AnimationStatus.dismissed) {
-          _bool = true;
+          menuIsOpen = true;
         }
       });
-    _animation2 = Tween<double>(begin: 0, end: 1)
-        .animate(_controller as Animation<double>)
+    menuAnimation2 = Tween<double>(begin: 0, end: 1)
+        .animate(menuController as Animation<double>)
       ..addListener(() {
         setState(() {});
       });
-    _animation3 = Tween<double>(begin: .9, end: 1).animate(CurvedAnimation(
-        parent: _controller as Animation<double>,
+    menuAnimation3 = Tween<double>(begin: .9, end: 1).animate(CurvedAnimation(
+        parent: menuController as Animation<double>,
         curve: Curves.fastLinearToSlowEaseIn,
         reverseCurve: Curves.ease))
       ..addListener(() {
@@ -56,64 +63,77 @@ class _SettingIconState extends State<SettingIcon>
 
   @override
   void dispose() {
-    _controller!.dispose();
+    menuController!.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
-    return Stack(
-      children: [
-        CustomNavigationDrawer(),
-        Padding(
-          padding: EdgeInsets.fromLTRB(_width / 15, _width / 9.5, 0, 0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              InkWell(
-                highlightColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                onTap: () {
-                  HapticFeedback.lightImpact();
-                  if (_bool == true) {
-                    _controller!.forward();
-                  } else {
-                    _controller!.reverse();
-                  }
-                  _bool = false;
-                },
-                child: _bool
-                    ? ClipRRect(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(99)),
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaY: 5, sigmaX: 5),
-                          child: Container(
-                            height: _width / 8.5,
-                            width: _width / 8.5,
-                            decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(.05),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Icon(
-                                _bool == true
-                                    ? Icons.settings
-                                    : Icons.arrow_forward_rounded,
-                                size: _width / 17,
-                                color: Colors.black.withOpacity(.6),
+    return WillPopScope(
+      onWillPop: () async {
+        if (menuIsOpen == false) {
+          menuController!.reverse();
+          return false;
+        } else {
+          final shouldPop =
+              await Provider.of<TPoostProvider>(context, listen: false)
+                  .showWarning(context);
+          return shouldPop ?? false;
+        }
+      },
+      child: Stack(
+        children: [
+          CustomNavigationDrawer(),
+          Padding(
+            padding: EdgeInsets.fromLTRB(_width / 15, _width / 9.5, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                InkWell(
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () {
+                    HapticFeedback.lightImpact();
+                    if (menuIsOpen == true) {
+                      menuController!.forward();
+                    } else {
+                      menuController!.reverse();
+                    }
+                    menuIsOpen = false;
+                  },
+                  child: menuIsOpen
+                      ? ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(99)),
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaY: 5, sigmaX: 5),
+                            child: Container(
+                              height: _width / 8.5,
+                              width: _width / 8.5,
+                              decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(.05),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  menuIsOpen == true
+                                      ? Icons.menu
+                                      : Icons.arrow_forward_rounded,
+                                  size: _width / 17,
+                                  color: Colors.black.withOpacity(.6),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      )
-                    : const SizedBox(),
-              ),
-            ],
+                        )
+                      : const SizedBox(),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -122,14 +142,14 @@ class _SettingIconState extends State<SettingIcon>
     double _width = MediaQuery.of(context).size.width;
     return BackdropFilter(
       filter: ImageFilter.blur(
-          sigmaY: _animation1!.value, sigmaX: _animation1!.value),
+          sigmaY: menuAnimation1!.value, sigmaX: menuAnimation1!.value),
       child: Container(
-        height: _bool ? 0 : _height,
-        width: _bool ? 0 : _width,
+        height: menuIsOpen ? 0 : _height,
+        width: menuIsOpen ? 0 : _width,
         color: Colors.black12,
         child: Center(
           child: Transform.scale(
-            scale: _animation3!.value,
+            scale: menuAnimation3!.value,
             child: Container(
               width: _width * .9,
               height: _width * 1.3,
@@ -137,7 +157,7 @@ class _SettingIconState extends State<SettingIcon>
                 color: Theme.of(context)
                     .colorScheme
                     .primary
-                    .withOpacity(_animation2!.value),
+                    .withOpacity(menuAnimation2!.value),
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Stack(
@@ -150,9 +170,9 @@ class _SettingIconState extends State<SettingIcon>
                       radius: 20,
                       child: IconButton(
                           onPressed: () {
-                            _controller!.reverse();
+                            menuController!.reverse();
 
-                            _bool = false;
+                            menuIsOpen = false;
                           },
                           icon: Icon(
                             Icons.arrow_forward,
@@ -163,7 +183,7 @@ class _SettingIconState extends State<SettingIcon>
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.black12,
                         radius: 35,
                         child: Icon(
@@ -264,12 +284,12 @@ class _SettingIconState extends State<SettingIcon>
           onTap: voidCallback,
           title: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1),
           ),
-          trailing: Icon(
+          trailing: const Icon(
             Icons.arrow_right,
             color: Colors.white,
           ),
@@ -280,7 +300,7 @@ class _SettingIconState extends State<SettingIcon>
   }
 
   Widget divider() {
-    return Container(
+    return SizedBox(
       height: 5,
       width: MediaQuery.of(context).size.width,
     );
