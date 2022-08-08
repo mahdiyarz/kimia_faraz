@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 
 import 'products_type_category_sc.dart';
 import 'brand_type_category_sc.dart';
-import 'favorites_sc.dart';
-import 'search_sc.dart';
+import 'favorite/favorites_sc.dart';
+import 'search/search_sc.dart';
 
 class TabBarSc extends StatefulWidget {
   const TabBarSc({Key? key}) : super(key: key);

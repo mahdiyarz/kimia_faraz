@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/product_model.dart';
+import '../../../models/product_model.dart';
 
 class Points extends StatelessWidget {
   final Products product;

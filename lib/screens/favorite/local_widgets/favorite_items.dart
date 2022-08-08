@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kimia_faraz/models/product_model.dart';
-import 'package:kimia_faraz/providers/tpoost_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../screens/product_details_sc.dart';
+import '../../../providers/tpoost_provider.dart';
+import '../../../models/product_model.dart';
+import '../../product_details/product_details_sc.dart';
 
 class FavoriteItems extends StatelessWidget {
   final List<Products> products;

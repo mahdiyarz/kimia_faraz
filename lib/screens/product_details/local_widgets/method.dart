@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/product_model.dart';
+import '../../../models/product_model.dart';
 
 class Method extends StatelessWidget {
   final Products product;

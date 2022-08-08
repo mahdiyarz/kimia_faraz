@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/product_model.dart';
-import '../providers/tpoost_provider.dart';
+import '../../../models/product_model.dart';
+import '../../../providers/tpoost_provider.dart';
 
 class FavoriteButton extends StatefulWidget {
   bool isPressed;

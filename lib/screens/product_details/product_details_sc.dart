@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../models/product_model.dart';
-import '../widgets/points.dart';
-import '../widgets/product_picture.dart';
-import '../widgets/active_ingredients.dart';
-import '../widgets/method.dart';
+
+import '../../models/product_model.dart';
+import 'local_widgets/points.dart';
+import 'local_widgets/product_picture.dart';
+import 'local_widgets/active_ingredients.dart';
+import 'local_widgets/method.dart';
 
 class ProductDetailsSc extends StatelessWidget {
   final Products product;

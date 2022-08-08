@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/tab_bar_sc.dart';
+import '../../tab_bar_sc.dart';
 
 class HomeButton extends StatefulWidget {
   const HomeButton({Key? key}) : super(key: key);

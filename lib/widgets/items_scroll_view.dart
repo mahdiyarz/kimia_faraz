@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
-import '../screens/product_details_sc.dart';
+import '../screens/product_details/product_details_sc.dart';
 import '../DATA_BASE.dart';
 
 class ItemsScrollView extends StatelessWidget {

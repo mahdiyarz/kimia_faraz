@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/tpoost_provider.dart';
-import '../widgets/search_items.dart';
-import '../models/product_model.dart';
-import '../DATA_BASE.dart';
+import 'local_widgets/search_items.dart';
+import '../../providers/tpoost_provider.dart';
+import '../../models/product_model.dart';
+import '../../DATA_BASE.dart';
 
 class SearchSc extends StatefulWidget {
   const SearchSc({Key? key}) : super(key: key);

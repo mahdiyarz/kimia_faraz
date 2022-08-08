@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/fav_button.dart';
-import '../widgets/home_button.dart';
-import '../widgets/back_button.dart';
-import '../providers/tpoost_provider.dart';
-import '../models/product_model.dart';
+import '../../../providers/tpoost_provider.dart';
+import '../../../models/product_model.dart';
+import 'fav_button.dart';
+import 'home_button.dart';
+import 'back_button.dart';
 import 'skin_type.dart';
 import 'skin_color.dart';
 

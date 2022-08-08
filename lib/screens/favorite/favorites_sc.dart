@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kimia_faraz/widgets/favorite_items.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/tpoost_provider.dart';
-import '../widgets/setting_icon.dart';
+import 'local_widgets/favorite_items.dart';
+import '../../providers/tpoost_provider.dart';
+import '../../widgets/setting_icon.dart';
 
 class FavoritesSc extends StatelessWidget {
   const FavoritesSc({Key? key}) : super(key: key);
