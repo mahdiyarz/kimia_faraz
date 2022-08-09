@@ -26,6 +26,7 @@ void main() {
           child: TabBarSc(),
         ),
         theme: ThemeData(
+          fontFamily: 'vazir',
           // canvasColor: const Color.fromARGB(255, 101, 93, 138),
           colorScheme: ColorScheme.fromSwatch().copyWith(
             primary: const Color.fromARGB(255, 120, 151, 171),
