@@ -50,12 +50,12 @@ class _ProductPictureState extends State<ProductPicture> {
                   ),
                 ),
         ),
-        widget.product.skinType!.isNotEmpty
-            ? SkinType(product: widget.product)
-            : const SizedBox(),
-        widget.product.color!.isNotEmpty
-            ? SkinColor(product: widget.product)
-            : const SizedBox(),
+        widget.product.skinType == null
+            ? const SizedBox()
+            : SkinType(product: widget.product),
+        widget.product.color == null
+            ? const SizedBox()
+            : SkinColor(product: widget.product),
         Positioned(
             top: 5,
             left: 15,
