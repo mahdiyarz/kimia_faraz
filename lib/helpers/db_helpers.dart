@@ -5,12 +5,12 @@ import 'package:path/path.dart' as pathPackage;
 
 import '../models/depot_model.dart';
 
-class DBHelperr {
-  static final DBHelperr instance = DBHelperr._init();
+class DBHelper {
+  static final DBHelper instance = DBHelper._init();
 
   static sqflite.Database? _database;
 
-  DBHelperr._init();
+  DBHelper._init();
 
   Future<sqflite.Database> get database async {
     if (_database != null) return _database!;
@@ -29,6 +29,7 @@ class DBHelperr {
   Future _createDB(sqflite.Database db, int version) async {
     const idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
     const textType = 'TEXT NOT NULL';
+    const textTypeNull = 'TEXT';
     const intType = 'INTEGER NOT NULL';
     const intTypeNull = 'INTEGER';
 
@@ -52,8 +53,11 @@ class DBHelperr {
 
     await db.execute('''
       CREATE TABLE $tableFavoriteProducts (
-        ${FavoriteProductsFields.id} $idType,
-        ${FavoriteProductsFields.productId} $intType
+        ${FavoriteProductsFields.productId} $intType,
+        ${FavoriteProductsFields.productName} $textType,
+        ${FavoriteProductsFields.productLatinName} $textType,
+        ${FavoriteProductsFields.productBrandId} $intType,
+        ${FavoriteProductsFields.productImage} $textTypeNull
       )
     ''');
   }
@@ -151,6 +155,33 @@ class DBHelperr {
     );
   }
 
+  //* Favorite products logic
+  Future<FavoriteProducts> insertFavoriteProducts(
+      FavoriteProducts favoriteProducts) async {
+    final db = await instance.database;
+    final id =
+        await db.insert(tableFavoriteProducts, favoriteProducts.toJson());
+
+    return favoriteProducts.copy(productId: id);
+  }
+
+  Future<List<FavoriteProducts>> getFavoriteProductData() async {
+    final db = await instance.database;
+    const orderBy = '${FavoriteProductsFields.productId} ASC';
+    final result = await db.query(tableFavoriteProducts, orderBy: orderBy);
+
+    return result.map((e) => FavoriteProducts.fromJson(e)).toList();
+  }
+
+  Future<int> deleteFavoriteProduct(FavoriteProducts favoriteProducts) async {
+    final db = await instance.database;
+    return db.delete(
+      tableFavoriteProducts,
+      where: '${FavoriteProductsFields.productId} = ?',
+      whereArgs: [favoriteProducts.productId],
+    );
+  }
+
   Future closeDB() async {
     final db = await instance.database;
 
@@ -158,49 +189,49 @@ class DBHelperr {
   }
 }
 
-class DBHelper {
-  static Future<sqflite.Database> database() async {
-    final dbPath = await sqflite.getDatabasesPath();
-    const idType = 'INTEGER PRIMARY KEY';
-    const textType = 'TEXT NOT NULL';
-    const intType = 'INTEGER NOT NULL';
+// class DBHelper {
+//   static Future<sqflite.Database> database() async {
+//     final dbPath = await sqflite.getDatabasesPath();
+//     const idType = 'INTEGER PRIMARY KEY';
+//     const textType = 'TEXT NOT NULL';
+//     const intType = 'INTEGER NOT NULL';
 
-    return await sqflite.openDatabase(
-      pathPackage.join(dbPath, 'tpoost.db'),
-      onCreate: (db, version) {
-        return db.execute('''
-          CREATE TABLE favorite_products (
-            id $idType,
-            name $textType,
-            latinName $textType,
-            fullLatinName $textType,
-            image $textType,
-            catId $intType,
-            brandId $intType,
-            isFav $intType
-          )
-        ''');
-      },
-      version: 1,
-    );
-  }
+//     return await sqflite.openDatabase(
+//       pathPackage.join(dbPath, 'tpoost.db'),
+//       onCreate: (db, version) {
+//         return db.execute('''
+//           CREATE TABLE favorite_products (
+//             id $idType,
+//             name $textType,
+//             latinName $textType,
+//             fullLatinName $textType,
+//             image $textType,
+//             catId $intType,
+//             brandId $intType,
+//             isFav $intType
+//           )
+//         ''');
+//       },
+//       version: 1,
+//     );
+//   }
 
-  static Future<void> insert(String table, Map<String, Object> data) async {
-    final db = await DBHelper.database();
-    db.insert(
-      table,
-      data,
-      conflictAlgorithm: sqflite.ConflictAlgorithm.replace,
-    );
-  }
+//   static Future<void> insert(String table, Map<String, Object> data) async {
+//     final db = await DBHelper.database();
+//     db.insert(
+//       table,
+//       data,
+//       conflictAlgorithm: sqflite.ConflictAlgorithm.replace,
+//     );
+//   }
 
-  static Future<List<Map<String, dynamic>>> getData(String table) async {
-    final db = await DBHelper.database();
-    return db.query(table);
-  }
+//   static Future<List<Map<String, dynamic>>> getData(String table) async {
+//     final db = await DBHelper.database();
+//     return db.query(table);
+//   }
 
-  static Future<int> delete(String table, int id) async {
-    final db = await DBHelper.database();
-    return db.delete(table, where: "id = ?", whereArgs: [id]);
-  }
-}
+//   static Future<int> delete(String table, int id) async {
+//     final db = await DBHelper.database();
+//     return db.delete(table, where: "id = ?", whereArgs: [id]);
+//   }
+// }

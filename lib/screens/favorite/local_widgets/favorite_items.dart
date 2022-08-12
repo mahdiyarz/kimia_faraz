@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kimia_faraz/models/favorite_model.dart';
 import 'package:provider/provider.dart';
 
 import '../../../providers/tpoost_provider.dart';
@@ -6,7 +7,7 @@ import '../../../models/product_model.dart';
 import '../../product_details/product_details_sc.dart';
 
 class FavoriteItems extends StatelessWidget {
-  final List<Products> products;
+  final List<FavoriteProducts> products;
   final List<Brands> brands;
   const FavoriteItems({
     Key? key,
@@ -25,10 +26,10 @@ class FavoriteItems extends StatelessWidget {
         padding: EdgeInsets.only(bottom: _width / 5, top: _width / 5),
         itemCount: products.length,
         itemBuilder: (context, index) {
-          final _product =
-              Provider.of<TPoostProvider>(context).findById(products[index].id);
-          final productBrand = brands
-              .firstWhere((element) => element.id == products[index].brandId);
+          final _product = Provider.of<TPoostProvider>(context)
+              .findById(products[index].productId);
+          final productBrand = brands.firstWhere(
+              (element) => element.id == products[index].productBrandId);
           return Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
@@ -71,7 +72,7 @@ class FavoriteItems extends StatelessWidget {
                         ),
                         child: Container(
                           child: _product.image!.contains('.png')
-                              ? Image.asset(products[index].image!)
+                              ? Image.asset(products[index].productImage!)
                               : const Icon(
                                   Icons.photo_size_select_actual_outlined,
                                   size: 30,
@@ -88,7 +89,7 @@ class FavoriteItems extends StatelessWidget {
                             children: [
                               FittedBox(
                                 child: Text(
-                                  products[index].name,
+                                  products[index].productName,
                                   style: const TextStyle(fontSize: 16),
                                 ),
                               ),
@@ -97,9 +98,9 @@ class FavoriteItems extends StatelessWidget {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  FittedBox(
+                                  Expanded(
                                     child: Text(
-                                      products[index].latinName,
+                                      products[index].productLatinName,
                                       style: const TextStyle(
                                           color: Colors.black45),
                                     ),

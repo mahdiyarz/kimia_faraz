@@ -40,10 +40,8 @@ class _FavoriteButtonState extends State<FavoriteButton> {
             widget.product.id,
             widget.product.name,
             widget.product.latinName,
-            widget.product.fullLatinName,
-            widget.product.image as String,
-            widget.product.categoryId,
             widget.product.brandId,
+            widget.product.image,
           );
         },
         child: AnimatedContainer(
