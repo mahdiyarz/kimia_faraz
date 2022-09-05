@@ -19,12 +19,14 @@ class BrandTypeDetailsSc extends StatelessWidget {
     final List<Products> products =
         productsData.where((element) => element.brandId == brandId).toList();
     return Scaffold(
-      body: ItemsScrollView(
-        itemName: brands.name,
-        itemLatinName: brands.latinName,
-        itemImage: brands.image,
-        productsList: products,
-        showBrands: false,
+      body: SafeArea(
+        child: ItemsScrollView(
+          itemName: brands.name,
+          itemLatinName: brands.latinName,
+          itemImage: brands.image,
+          productsList: products,
+          showBrands: false,
+        ),
       ),
     );
   }

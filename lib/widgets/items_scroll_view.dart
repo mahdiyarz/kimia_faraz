@@ -30,7 +30,7 @@ class ItemsScrollView extends StatelessWidget {
           pinned: true,
           snap: true,
           floating: true,
-          expandedHeight: MediaQuery.of(context).size.height / 1.5,
+          expandedHeight: _width / 1.5,
           flexibleSpace: FlexibleSpaceBar(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
