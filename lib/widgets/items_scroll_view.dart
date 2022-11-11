@@ -147,6 +147,7 @@ class ItemsScrollView extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         FittedBox(
+                                          fit: BoxFit.scaleDown,
                                           child: Text(
                                             productsList[index].name,
                                             style:
@@ -159,10 +160,12 @@ class ItemsScrollView extends StatelessWidget {
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             FittedBox(
+                                              fit: BoxFit.scaleDown,
                                               child: Text(
                                                 productsList[index].latinName,
                                                 style: const TextStyle(
-                                                    color: Colors.black45),
+                                                    color: Colors.black45,
+                                                    fontSize: 10),
                                               ),
                                             ),
                                             showBrands == false
